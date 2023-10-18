@@ -1,0 +1,60 @@
+html {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+.ja_app {
+    font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+h2 {
+    font-family: 'Source Serif Pro', serif;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+.ja_app {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+}
+
+h1 {
+    font-size: 75%;
+    letter-spacing: 0.05rem;
+    margin: 5%;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+h2 {
+    font-size: 100%;
+    font-weight: 500;
+}
+
+.ja_app {
+    font-size: 90%;
+    padding: 1rem;
+    margin: auto;
+    width: 95%;
+    height: 75%;
+    max-width: 1000px;
+    overflow: auto;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.25rem 2.5rem 0.25rem 0.25rem;
+    margin: 2.5%;
+}

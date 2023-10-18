@@ -1,0 +1,135 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+input[type="radio"],
+#appreciate section a[hidden] {
+    display: none;
+}
+
+#appreciate {
+    font-family: 'Source Serif Pro', serif;
+}
+
+#index label {
+    text-transform: capitalize;
+}
+
+button,
+#index label,
+#appreciate section a {
+    appearance: none;
+    background: transparent;
+    border-radius: 0.5rem;
+    outline: none;
+    display: inline-block;
+}
+
+button,
+#index label {
+    padding: 0.25rem 0.5rem;
+}
+
+#appreciate section a {
+    color: #000;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+}
+
+button,
+strong {
+    font-size: 111%;
+    font-weight: 500;
+}
+
+button {
+    border: 1px solid transparent;
+    color: #000;
+    font-family: inherit;
+    transition: 2.5s all;
+}
+
+#index label,
+#appreciate section a {
+    font-size: 100%;
+    border: 1px solid;
+    transition: 2.5s all;
+}
+
+button:hover,
+#index label:hover,
+#index input[type="radio"]:checked+label {
+    color: #fff;
+    cursor: pointer;
+    transition: 1.5s all;
+    background: red;
+    border: 1px solid red;
+}
+
+#appreciate section a:hover {
+    color: red;
+    transition: 1.5s all;
+}
+
+header nav p {
+    display: flex;
+    gap: 0.25rem;
+    flex-flow: wrap;
+    padding: 0;
+    margin: 0.25rem 0;
+}
+
+h1 {
+    border-left: solid 1px red;
+    padding-left: 0.125em;
+    transition: 2.5s all;
+}
+
+h1:hover {
+    border-left: solid 1px #000;
+    color: red;
+    cursor: pointer;
+    transition: 1s all;
+}
+
+#appreciate {
+    font-size: 100%;
+    padding: 0 7.5% 0 0;
+    margin: 5% auto;
+    width: 95.5%;
+    max-width: 1550px;
+}
+
+#appreciate section {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+}
+
+#appreciate section a {
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    margin: 0.5rem;
+    width: calc(25% - 1rem);
+}
+
+@media screen and (max-width: 1200px) {
+    #appreciate section a {
+        width: calc(30% - 1rem);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #appreciate section a {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #appreciate section a {
+        width: calc(100% - 1rem);
+    }
+}

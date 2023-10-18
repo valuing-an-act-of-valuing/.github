@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!--og:meta-->
+    <meta content="website" property="og:type">
+    <title>あなたの大切なものは何ですか？</title>
+    <meta content="あなたの大切なものは何ですか？" property="og:title">
+    <meta content="Q. What do you value?" name="description">
+    <meta content="Q. What do you value?" name="og:description">
+
+    <!--for Twitter-->
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="https://creative-community.space/value/profile/" property="og:url">
+    <meta content="https://creative-community.space/value/" property="og:image">
+    <meta content="https://creative-community.space/value/" name="twitter:image:src">
+
+    <!--Icons-->
+    <link rel="icon" href="favicon.jpg">
+    <link rel="icon" href="icon.jpg" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="icon.jpg" sizes="180x180">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,700;1,600&display=swap">
+    <link rel="stylesheet" href="../css/value.css">
+    <link rel="stylesheet" href="../css/icon.css">
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+
+<body>
+    <header>
+        <h1>あなたの大切なものは何ですか？</h1>
+        <h2>Q. What do you value?</h2>
+    </header>
+
+    <form id="form" action="#" method="post">
+        <h3 id="icon">
+            <u>this is</u> a
+            <i>entry form</i> for
+            <b>valuing an act of valuing</b>
+        </h3>
+        <p>
+            <label for="title">Title</label><br />
+            <input type="text" id="title" name="title" placeholder="あなたの大切なものは何ですか？" required>
+        </p>
+        <p>
+            <label for="name">Your Name</label><br />
+            <input type="text" id="name" name="name" placeholder="名前" required>
+        </p>
+        <p>
+            <label for="email">Your Email</label><br />
+            <input type="email" id="email" name="email" placeholder="メールアドレス" required>
+        </p>
+        <fieldset>
+            <legend>
+                Text by
+                <input type="radio" id="ja" name="language" value="ja" required>
+                <label for="ja">日本語</label>
+                <input type="radio" id="en" name="language" value="en" required>
+                <label for="en">English</label>
+                <input type="radio" id="other" name="language" value="other" required>
+                <label for="other">Other Language</label>
+            </legend>
+            <textarea name="essay" rows="12.5" placeholder="あなたの大切なものは何ですか？" required></textarea>
+        </fieldset>
+        <button type="submit">Submit 投稿</button>
+    </form>
+
+    <footer>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <script src="js/index.js"></script>
+    <script>
+        indexJson("index.json")
+        fetchMD('README.md', '#about')
+    </script>
+
+    <!--og:meta-->
+    <meta content="website" property="og:type">
+    <title>大切にすることを大切にするための場所</title>
+    <meta content="大切にすることを大切にするための場所" property="og:title">
+    <meta content="this is a space for valuing an act of valuing" name="description">
+    <meta content="this is a space for valuing an act of valuing" name="og:description">
+
+    <!--for Twitter-->
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="https://creative-community.space/value/" property="og:url">
+    <meta content="https://creative-community.space/value/" property="og:image">
+    <meta content="https://creative-community.space/value/" name="twitter:image:src">
+
+    <!--Icons-->
+    <link rel="icon" href="favicon.jpg">
+    <link rel="icon" href="icon.jpg" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="icon.jpg" sizes="180x180">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,700;1,600&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/value.css">
+</head>
+
+<body>
+    <header>
+        <h1 onclick="openModal()">大切にすることを大切にするための場所</h1>
+        <h2>
+            Index /
+            <button type="button" onclick="openModal()">valuing an act of valuing</button>
+        </h2>
+        <nav id="index">
+            <p>
+                <input id="thing" value="thing" type="radio" name="index">
+                <label for="thing">thing</label>
+                <input id="object" value="object" type="radio" name="index">
+                <label for="object">object</label>
+                <input id="people" value="people" type="radio" name="index">
+                <label for="people">people</label>
+                <input id="valuing" value="valuing" type="radio" name="index">
+                <label for="valuing">valuing</label>
+                <input id="all" value="all" type="radio" name="index" checked>
+                <label for="all">view all</label>
+            </p>
+        </nav>
+    </header>
+
+    <article id="appreciate">
+        <section>
+            <a data-appreciate="topic" href="online/">
+                <strong>あなたの大切なものは何ですか？</strong><br>
+                <small>What do you value?</small>
+            </a>
+            <a data-appreciate="topic" href="book/">
+                <strong>大切にすることを大切にするための本</strong><br>
+                <small>the book for valuing an act of valuing</small>
+            </a>
+            <a data-appreciate="topic" href="book/still/">
+                <strong>今でも大切？</strong><br>
+                <small>Can you valuing to your value still?</small>
+            </a>
+        </section>
+        <section id="value"></section>
+    </article>
+
+    <dialog>
+        <button type="button">×</button>
+        <h3 id="icon">
+            <u>this is</u> a
+            <i>space</i> for
+            <b>valuing an act of valuing</b>
+        </h3>
+        <section id="about" class="ja_app"></section>
+    </dialog>
+
+    <footer>
+    </footer>
+</body>
+
+</html>

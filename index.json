@@ -1,0 +1,34 @@
+{ 
+  "appreciate" : [
+    {
+      "value" : "object",
+      "id" : "/galaxy/",
+      "title" : "Galaxy",
+      "name" : "Kazuma Sasajima"
+    },
+    {
+      "value" : "thing",
+      "id" : "/inthewind/",
+      "title" : "In The Wind",
+      "name" : "Kazuma Sasajima"
+    },
+    {
+      "value" : "people",
+      "id" : "/thesmell/",
+      "title" : "That Smell",
+      "name" : "Kazuma Sasajima"
+    },
+    {
+      "value" : "people",
+      "id" : "/sign/",
+      "title" : "Sign",
+      "name" : "∧° ┐ | creative, community space"
+    },
+    {
+      "value" : "valuing",
+      "id" : "/motto/",
+      "title" : "pe.hu",
+      "name" : "ささじまかずま"
+    }
+  ]
+}
