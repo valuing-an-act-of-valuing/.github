@@ -6,12 +6,27 @@ html {
     box-sizing: border-box;
 }
 
+hr {
+    border: none;
+    padding: 5%;
+    margin: 5%;
+}
+
+@font-face {
+    font-family: "YuGothic";
+    src: url(fonts/YuGothR.ttc),
+        url(fonts/YuGothM.ttc),
+        url(fonts/YuGothL.ttc),
+        url(fonts/YuGothB.ttc);
+}
+
 h1,
 .ja_app {
     font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 
-h2 {
+h2,
+.en_app {
     font-family: 'Source Serif Pro', serif;
 }
 
@@ -40,14 +55,26 @@ h2 {
     font-weight: 500;
 }
 
+#app {
+    padding: 2.5% 7.5%;
+}
+
 .ja_app {
     font-size: 90%;
     padding: 1rem;
     margin: auto;
-    width: 95%;
+    width: 90%;
     height: 75%;
     max-width: 1000px;
+    max-height: 550px;
     overflow: auto;
+}
+
+.en_app {
+    font-size: 100%;
+    padding: 0;
+    margin: 10% auto 15%;
+    max-width: 750px;
 }
 
 header {

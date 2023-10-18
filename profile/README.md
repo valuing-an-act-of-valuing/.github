@@ -1,12 +1,9 @@
-## Hi there 👋
+わたしたちが「大切にすること」はただ一つ。
+誰にでもある「何かを大切に思う気持ち」を平等に評価すること。
 
-<!--
+誰にもわかってもらえないかもしれないけど、自分にとっては大切なことやもの。
+特別な人からの贈り物とか、ずっと使っている愛着のあるものだったり、自慢したいことだったり、もうここにはないけど時々思い出す瞬間とか。
 
-**Here are some ideas to get you started:**
+いろいろな人たちの「大切にすること」を知ることが、「大切にすることを大切にする」ための第一歩。
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+誰からの評価も批判も気にならないほど、大切にすることを大切にするために、いろいろな人たちが大切にすることやものをここに集めます。

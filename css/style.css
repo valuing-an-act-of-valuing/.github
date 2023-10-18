@@ -8,6 +8,7 @@ input[type="radio"],
     display: none;
 }
 
+#index,
 #appreciate {
     font-family: 'Source Serif Pro', serif;
 }
@@ -28,6 +29,7 @@ button,
 
 button,
 #index label {
+    font-family: inherit;
     padding: 0.25rem 0.5rem;
 }
 
@@ -46,7 +48,6 @@ strong {
 button {
     border: 1px solid transparent;
     color: #000;
-    font-family: inherit;
     transition: 2.5s all;
 }
 

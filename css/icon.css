@@ -7,11 +7,9 @@ dialog {
     font-family: 'Source Serif Pro', serif;
     letter-spacing: 0.1rem;
     padding: 1rem 2.5rem 1rem 1rem;
-    margin: 2.5rem auto;
+    margin: 2.5rem auto 10rem;
     width: 95%;
-    height: 75vh;
     max-width: 550px;
-    max-height: 75vw;
 }
 
 #icon b {
@@ -32,10 +30,10 @@ dialog button {
 }
 
 @media screen and (max-width: 750px) {
-    #icon h3 {
+    #icon {
         font-size: 7.5vw;
         letter-spacing: 0.25vw;
-        margin: 5% auto;
+        margin: 5% auto 20%;
     }
 
     #icon i {

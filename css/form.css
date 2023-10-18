@@ -1,5 +1,44 @@
 #form {
-    padding: 0 5% 2.5% 2.5%;
+    padding: 2.5% 12.5% 5% 2.5%;
     margin: auto;
     max-width: 750px;
+}
+
+label,
+legend {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 90%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    font-size: 111%;
+    font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    padding: 0.25rem;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+form button[type="submit"] {
+    border-radius: 2rem;
+    display: block;
+    font-family: 'Source Serif Pro', serif;
+    font-size: 125%;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+    #form {
+        font-size: 3vw;
+    }
 }

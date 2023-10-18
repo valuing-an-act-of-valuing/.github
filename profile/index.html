@@ -33,21 +33,18 @@
 </head>
 
 <body>
-    <header>
-        <h1>あなたの大切なものは何ですか？</h1>
-        <h2>Q. What do you value?</h2>
-    </header>
+    <h1>あなたの大切なものは何ですか？</h1>
+
+    <article id="app" hidden>
+        <section></section>
+    </article>
 
     <form id="form" action="#" method="post">
-        <h3 id="icon">
+        <h2 id="icon">
             <u>this is</u> a
             <i>entry form</i> for
             <b>valuing an act of valuing</b>
-        </h3>
-        <p>
-            <label for="title">Title</label><br />
-            <input type="text" id="title" name="title" placeholder="あなたの大切なものは何ですか？" required>
-        </p>
+        </h2>
         <p>
             <label for="name">Your Name</label><br />
             <input type="text" id="name" name="name" placeholder="名前" required>
@@ -55,6 +52,11 @@
         <p>
             <label for="email">Your Email</label><br />
             <input type="email" id="email" name="email" placeholder="メールアドレス" required>
+        </p>
+        <br>
+        <p>
+            <label for="title">What do you value?</label><br />
+            <input type="text" id="title" name="title" placeholder="あなたの大切なものは何ですか？" required>
         </p>
         <fieldset>
             <legend>
@@ -66,7 +68,7 @@
                 <input type="radio" id="other" name="language" value="other" required>
                 <label for="other">Other Language</label>
             </legend>
-            <textarea name="essay" rows="12.5" placeholder="あなたの大切なものは何ですか？" required></textarea>
+            <textarea id="text" name="text" rows="12.5" required></textarea>
         </fieldset>
         <button type="submit">Submit 投稿</button>
     </form>
