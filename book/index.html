@@ -12,7 +12,22 @@
             fetchMD('README.md', '#credit')
             fetchHTML('still/mousedragscrollable.html', '#still')
             fetchHTML('advertisement.html', '#advertisement')
+
+            // URLのアンカー（#以降の部分）を取得
+            const urlHash = location.hash;
+
+            // URLにアンカーがない場合
+            if (urlHash == "#still") {
+                still()
+            }
         }, false)
+
+        function still() {
+            const still = document.querySelector('#still');
+            const advertisement = document.querySelector('#advertisement');
+            still.hidden = false;
+            advertisement.hidden = true;
+        }
     </script>
 
     <!--og:meta-->
@@ -147,7 +162,15 @@
         };
     </script>
 
-    <ul id="still" class="mousedragscrollable"></ul>
+    <article>
+        <section class="en_app">
+            <h3>
+                <a class="ja" onclick="still()" href="#still">この本が完成した2019年の11月、時間が経った今でも大切なものは大切なのか、参加者の皆さんに2つの質問を投げかけました。</a>
+            </h3>
+        </section>
+    </article>
+
+    <ul id="still" class="mousedragscrollable" hidden></ul>
     <ul id="advertisement" class="mousedragscrollable"></ul>
     <script src="../js/scrollable.js"></script>
 
