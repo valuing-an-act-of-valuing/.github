@@ -5,9 +5,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
-    <script src="index.js"></script>
+    <script src="../js/publication.js"></script>
     <script>
-        fetchMD('README.md', '#credit')
+        document.addEventListener('DOMContentLoaded', function () {
+            publication("index.json")
+            fetchMD('README.md', '#credit')
+            fetchHTML('still/mousedragscrollable.html', '#still')
+            fetchHTML('advertisement.html', '#advertisement')
+        }, false)
     </script>
 
     <!--og:meta-->
@@ -18,15 +23,15 @@
     <meta content="the book for valuing an act of valuing" name="og:description">
 
     <!--for Twitter-->
-    <meta content="summary_large_image" name="twitter:card">
+    <meta content="summary" name="twitter:card">
     <meta content="https://creative-community.space/value/book/" property="og:url">
-    <meta content="https://creative-community.space/value/book/" property="og:image">
-    <meta content="https://creative-community.space/value/book/" name="twitter:image:src">
+    <meta content="https://creative-community.space/value/book/img/book.png" property="og:image">
+    <meta content="https://creative-community.space/value/book/img/book.png" name="twitter:image:src">
 
     <!--Icons-->
-    <link rel="icon" href="favicon.jpg">
-    <link rel="icon" href="icon.jpg" sizes="192x192">
-    <link rel="apple-touch-icon-precomposed" href="icon.jpg" sizes="180x180">
+    <link rel="icon" href="https://pe-hu.github.io/ver/icon/favicon.png">
+    <link rel="icon" href="https://pe-hu.github.io/ver/icon/android.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://pe-hu.github.io/ver/icon/ios.png" sizes="180x180">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +41,7 @@
     <link rel="stylesheet" href="../css/value.css">
     <link rel="stylesheet" href="../css/scrollable.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="still/style.css" />
     <style>
         #cover {
             float: right;
@@ -83,34 +89,9 @@
                 the answers.
             </p>
         </section>
-        
-        <form class="en_app" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-            <input type="hidden" name="cmd" value="_s-xclick" />
-            <input type="hidden" name="hosted_button_id" value="KMHP2Y2N2PLYC" />
-            <table>
-                <tr>
-                    <td>
-                        <input type="hidden" name="on0" value="the book for valuing an act of valuing" />
-                        the book for valuing an act of valuing
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <select name="os0">
-                            <option value="大切にすることを大切にするための本">
-                                大切にすることを大切にするための本 ¥1,650 JPY
-                            </option>
-                            <option value="+ 今でも大切？">
-                                + 今でも大切？ ¥2,000 JPY
-                            </option>
-                        </select>
-                    </td>
-                </tr>
-            </table>
-            <input type="hidden" name="currency_code" value="JPY" />
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0"
-                name="submit" title="PayPal - The safer, easier way to pay online!" alt="Add to Cart" />
 
+        <form class="en_app" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <p>Price: <b>1650</b> JPY</p>
             <p>
                 B6 size (128×182mm)<br />
                 134 pages<br />
@@ -120,7 +101,12 @@
                 Bilingual (Japanese / English)<br />
                 First Edition on November 23th 2019
             </p>
-            <p>Price: <b>1500</b> JPY (+tax)</p>
+            <br>
+            <input type="hidden" name="cmd" value="_s-xclick" />
+            <input type="hidden" name="hosted_button_id" value="DX456RG6W9K6W" />
+            <input type="hidden" name="currency_code" value="JPY" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit"
+                title="PayPal - The safer, easier way to pay online!" alt="Add to Cart" />
         </form>
 
         <section id="credit" class="ja_app"></section>
@@ -151,7 +137,7 @@
         });
         function parallaxScroll() {
             var scrolled = $(window).scrollTop();
-            $('.img_000').css('top', (100 - (scrolled * -.025)) + 'vh');
+            $('.img_000').css('top', (95 - (scrolled * -.025)) + 'vh');
             $('.img_004').css('top', (333 - (scrolled * .25)) + 'vh');
             $('.img_005').css('top', (222 - (scrolled * .075)) + 'vh');
             $('.img_006').css('top', (250 - (scrolled * .111)) + 'vh');
@@ -161,26 +147,8 @@
         };
     </script>
 
-    <ul class="mousedragscrollable">
-        <li>
-            <p id="icon">
-                this is a
-                <u>advertisement</u>
-                for
-                <i>the book</i>
-                for<br />
-                <b>valuing an act of valuing</b>
-            </p>
-        </li>
-        <img src="img/003.png" height="97.5%">
-        <li>
-            <section>
-                <h3 class="ja">大切にすることを大切にするための本のチラシ</h3>
-                <p class="ja">チラシには、「大切にすることを大切にするための本」に収録したエピソードの英題とそれらに関連するいくつかの写真を掲載しています。</p>
-                <p class="ja">また、線にそってチラシを折り、「大切にすることを大切にするための本」のブックカバーとしても使用できます。</p>
-            </section>
-        </li>
-    </ul>
+    <ul id="still" class="mousedragscrollable"></ul>
+    <ul id="advertisement" class="mousedragscrollable"></ul>
     <script src="../js/scrollable.js"></script>
 
     <footer id="links">
