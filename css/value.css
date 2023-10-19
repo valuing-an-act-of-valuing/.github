@@ -21,11 +21,13 @@ hr {
 }
 
 h1,
+.ja,
 .ja_app {
     font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 
 h2,
+.en,
 .en_app {
     font-family: 'Source Serif Pro', serif;
 }
@@ -59,6 +61,23 @@ h2 {
     padding: 2.5% 7.5%;
 }
 
+#links {
+    font-size: 90%;
+    padding: 0.75rem;
+}
+
+#links strong,
+#links a {
+    display: inline-block;
+    padding: 0.125rem 0;
+    margin: 0.25rem;
+}
+
+#links a {
+    border-bottom: solid 1px;
+    font-size: 111%;
+}
+
 .ja_app {
     font-size: 90%;
     padding: 1rem;
@@ -74,6 +93,7 @@ h2 {
     font-size: 100%;
     padding: 0;
     margin: 10% auto 15%;
+    width: 75%;
     max-width: 750px;
 }
 
