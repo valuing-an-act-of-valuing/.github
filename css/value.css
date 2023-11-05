@@ -42,7 +42,6 @@ h1,
 .ja_app {
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
-    height: 100%;
 }
 
 h1 {
