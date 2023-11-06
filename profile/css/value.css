@@ -30,7 +30,7 @@ h1,
 h2,
 .en,
 .en_app {
-    font-family: 'Source Serif Pro', serif;
+    font-family: "Source Serif Pro", serif;
 }
 
 h2 {
@@ -39,6 +39,7 @@ h2 {
 }
 
 h1,
+.vertical,
 .ja_app {
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
@@ -47,11 +48,6 @@ h1,
 h1 {
     font-size: 75%;
     letter-spacing: 0.05rem;
-    margin: 5%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 100;
 }
 
 h2 {
@@ -59,8 +55,16 @@ h2 {
     font-weight: 500;
 }
 
-#app {
-    padding: 2.5% 7.5%;
+h3.vertical {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 95%;
+    margin: 1rem 0.5rem;
+}
+
+#text {
+    padding: 1rem 1rem 7.5%;
 }
 
 #links {
@@ -80,15 +84,38 @@ h2 {
     font-size: 111%;
 }
 
+h1 {
+    margin: 2.5% 4%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
 .ja_app {
     font-size: 90%;
-    padding: 1rem;
-    margin: auto;
-    width: 90%;
+    margin: 1rem auto;
+    width: 85%;
     height: 75%;
     max-width: 1000px;
     max-height: 550px;
     overflow: auto;
+}
+
+@media screen and (max-width: 900px) {
+    h1 {
+        margin: 4.5% 3%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h1 {
+        margin: 5% 2.5%;
+    }
+
+    .ja_app {
+        margin: 1rem 20% 1rem auto;
+    }
 }
 
 .en_app {

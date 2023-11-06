@@ -1,34 +1,53 @@
 { 
   "appreciate" : [
     {
-      "value" : "object",
-      "id" : "/galaxy/",
-      "title" : "Galaxy",
-      "name" : "Kazuma Sasajima"
-    },
-    {
-      "value" : "thing",
-      "id" : "/inthewind/",
-      "title" : "In The Wind",
-      "name" : "Kazuma Sasajima"
-    },
-    {
       "value" : "people",
-      "id" : "/thesmell/",
-      "title" : "That Smell",
-      "name" : "Kazuma Sasajima"
-    },
-    {
-      "value" : "people",
-      "id" : "/sign/",
+      "id" : "sign",
       "title" : "Sign",
-      "name" : "∧° ┐ | creative, community space"
+      "name" : "∧° ┐ | creative, community space",
+      "lang" : "ja",
+      "text" : "README.md"
+    },
+    {
+      "value" : "object",
+      "id" : "galaxy",
+      "title" : "Galaxy",
+      "name" : "ささじまかずま",
+      "lang" : "ja",
+      "text" : "README.md",
+      "image" : [
+        "cover.png"
+      ]
     },
     {
       "value" : "valuing",
-      "id" : "/motto/",
+      "id" : "motto",
       "title" : "pe.hu",
-      "name" : "ささじまかずま"
+      "name" : "ささじまかずま",
+      "lang" : "ja",
+      "text" : "README.md",
+      "image" : [
+        "image.jpeg"
+      ]
+    },
+    {
+      "value" : "people",
+      "id" : "admiring",
+      "title" : "憧れ",
+      "name" : "芥川亜由弥",
+      "lang" : "ja",
+      "text" : "README.md",
+      "image" : [
+        "cover.jpg"
+      ]
+    },
+    {
+      "value" : "valuing",
+      "id" : "nostalgia",
+      "title" : "懐かしさ",
+      "name" : "千瑛",
+      "lang" : "ja",
+      "text" : "README.md"
     }
   ]
 }

@@ -33,38 +33,37 @@ a:hover  {
   place-self: end;
 }
 
-.mousedragscrollable,
-.mousedragscrollable li {
+.scrollable,
+.scrollable li {
   margin: 0;
   padding: 0;
 }
 
-.mousedragscrollable::-webkit-scrollbar-thumb,
-.mousedragscrollable li::-webkit-scrollbar-thumb {
+.scrollable::-webkit-scrollbar-thumb,
+.scrollable li::-webkit-scrollbar-thumb {
   background: #000;
   border-radius: 4vh;
 }
 
-.mousedragscrollable::-webkit-scrollbar,
-.mousedragscrollable li::-webkit-scrollbar {
+.scrollable::-webkit-scrollbar,
+.scrollable li::-webkit-scrollbar {
   width: 4vh;
   height: 4vh;
 }
 
-.mousedragscrollable {
+.scrollable {
   list-style: none;
   white-space: nowrap;
   overflow: auto;
   height: 100vh;
   max-height: -webkit-fill-available;
-  -webkit-overflow-scrolling: touch;
 }
 
-.mousedragscrollable > * {
+.scrollable > * {
   display: inline-block;
 }
 
-.mousedragscrollable li {
+.scrollable li {
   background-repeat: no-repeat;
   width: 90%;
   height: 97.5%;
@@ -73,7 +72,7 @@ a:hover  {
   white-space: normal;
 }
 
-.mousedragscrollable section {
+.scrollable section {
   display: grid;
   font-size: 90%;
   padding: 1rem;
@@ -81,7 +80,7 @@ a:hover  {
 }
 
 @media screen and (max-width: 550px) {
-  .mousedragscrollable {
+  .scrollable {
     font-size: 3.21vw;
   }
 }

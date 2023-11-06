@@ -1,5 +1,5 @@
 #form {
-    padding: 2.5% 12.5% 5% 2.5%;
+    padding: 2.5% 10% 5% 2.5%;
     margin: auto;
     max-width: 750px;
 }
@@ -28,7 +28,14 @@ fieldset {
     margin: 0;
 }
 
+form button {
+    appearance: none;
+    background: transparent;
+    outline: none;
+}
+
 form button[type="submit"] {
+    border: solid 0.1rem;
     border-radius: 2rem;
     display: block;
     font-family: 'Source Serif Pro', serif;

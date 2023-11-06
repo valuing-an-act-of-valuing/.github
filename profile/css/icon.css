@@ -24,15 +24,28 @@ dialog {
     letter-spacing: 0.15rem;
 }
 
+dialog {
+    width: 100%;
+    height: 100%;
+}
+
 dialog button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
     font-size: 200%;
-    float: right;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
 }
 
 @media screen and (max-width: 750px) {
     #icon {
-        font-size: 7.5vw;
+        font-size: 7vw;
         letter-spacing: 0.25vw;
+        padding: 2.5vw 5vw 2.5vw 2.5vw;
         margin: 5% auto 20%;
     }
 

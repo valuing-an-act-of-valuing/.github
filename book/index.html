@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
-    <script src="../js/publication.js"></script>
+    <script src="../profile/js/publication.js"></script>
+    <script src="../profile/js/fetch.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             publication("index.json")
@@ -43,39 +44,16 @@
     <meta content="https://creative-community.space/value/book/img/book.png" property="og:image">
     <meta content="https://creative-community.space/value/book/img/book.png" name="twitter:image:src">
 
-    <!--Icons-->
     <link rel="icon" href="https://pe-hu.github.io/ver/icon/favicon.png">
-    <link rel="icon" href="https://pe-hu.github.io/ver/icon/android.png" sizes="192x192">
-    <link rel="apple-touch-icon-precomposed" href="https://pe-hu.github.io/ver/icon/ios.png" sizes="180x180">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,700;1,600&display=swap">
-    <link rel="stylesheet" href="../css/icon.css">
-    <link rel="stylesheet" href="../css/value.css">
-    <link rel="stylesheet" href="../css/scrollable.css" />
+    <link rel="stylesheet" href="../profile/css/icon.css">
+    <link rel="stylesheet" href="../profile/css/value.css">
+    <link rel="stylesheet" href="../profile/css/scrollable.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="still/style.css" />
-    <style>
-        #cover {
-            float: right;
-            display: block;
-            margin: 0 2.5% 5%;
-            width: 40%;
-            max-width: 500px;
-        }
-
-        @media screen and (max-width: 750px) {
-            #cover {
-                clear: both;
-                float: none;
-                width: 75%;
-                margin: auto;
-                max-width: 75%;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -87,21 +65,20 @@
         for<br />
         <b>valuing an act of valuing</b>
     </h2>
+
     <img id="cover" src="img/book.png" alt="大切にすることを大切にするための本">
     <article>
         <section class="en_app">
             <h3 class="ja">あなたの大切なものは何ですか？</h3>
             <p class="ja">
-                このとてもシンプルな問いへの43の回答をこの本に収録します。
-                <br />アーティスト・デザイナー・ディレクターなど計30名が大切にするものごとを知ることで、あなたが大切にするものをもっと大切にできるようにと気持ちを込めて制作しました。
+                このとてもシンプルな問いへの43の回答をこの本に収録します。<br>
+                アーティスト・デザイナー・ディレクターなど計30名が大切にするものごとを知ることで、あなたが大切にするものをもっと大切にできるようにと気持ちを込めて制作しました。
             </p>
             <br />
             <h3>"What do you value?"</h3>
             <p>
-                This book gathers 38 unique answers for this simple question from artists, musicians, designers, and art
-                directors.<br>
-                We published this book hoping to provide readers with hints to admire their valuables better by reading
-                the answers.
+                This book gathers 38 unique answers for this simple question from artists, musicians, designers, and art directors.<br>
+                We published this book hoping to provide readers with hints to admire their valuables better by reading the answers.
             </p>
         </section>
 
@@ -135,6 +112,19 @@
             </p>
         </section>
     </article>
+    <article>
+        <section class="en_app">
+            <h3>
+                <a class="ja" onclick="still()" href="#still">
+                    この本が完成した2019年の11月、時間が経った今でも大切なものは大切なのか、参加者の皆さんに2つの質問を投げかけました。
+                </a>
+            </h3>
+        </section>
+    </article>
+
+    <ul id="still" class="scrollable wheel" hidden></ul>
+    <ul id="advertisement" class="scrollable wheel"></ul>
+    <script src="../profile/js/scrollable.js"></script>
 
     <main id="parallax">
         <span class="img_000"></span>
@@ -145,6 +135,7 @@
         <span class="img_008"></span>
         <span class="img_009"></span>
     </main>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(window).bind('scroll', function (e) {
@@ -161,19 +152,6 @@
             $('.img_009').css('top', (250 - (scrolled * .075)) + 'vh');
         };
     </script>
-
-    <article>
-        <section class="en_app">
-            <h3>
-                <a class="ja" onclick="still()"
-                    href="#still">この本が完成した2019年の11月、時間が経った今でも大切なものは大切なのか、参加者の皆さんに2つの質問を投げかけました。</a>
-            </h3>
-        </section>
-    </article>
-
-    <ul id="still" class="mousedragscrollable" hidden></ul>
-    <ul id="advertisement" class="mousedragscrollable"></ul>
-    <script src="../js/scrollable.js"></script>
 
     <footer id="links">
         <strong class="en">Distribute</strong><br>

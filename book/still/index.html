@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
-    <script src="../../js/publication.js"></script>
+    <script src="../../profile/js/publication.js"></script>
+    <script src="../../profile/js/fetch.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             fetchHTML('mousedragscrollable.html', '#still')
@@ -25,25 +26,20 @@
     <meta content="https://creative-community.space/value/book/still/img/book.jpeg" property="og:image">
     <meta content="https://creative-community.space/value/book/still/img/book.jpeg" name="twitter:image:src">
 
-    <!--Icons-->
     <link rel="icon" href="https://pe-hu.github.io/ver/icon/favicon.png">
-    <link rel="icon" href="https://pe-hu.github.io/ver/icon/android.png" sizes="192x192">
-    <link rel="apple-touch-icon-precomposed" href="https://pe-hu.github.io/ver/icon/ios.png" sizes="180x180">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,700;1,600&display=swap">
-    <link rel="stylesheet" href="../../css/icon.css">
-    <link rel="stylesheet" href="../../css/value.css">
-    <link rel="stylesheet" href="../../css/scrollable.css" />
+    <link rel="stylesheet" href="../../profile/css/icon.css">
+    <link rel="stylesheet" href="../../profile/css/value.css">
+    <link rel="stylesheet" href="../../profile/css/scrollable.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <ul id="still" class="mousedragscrollable"></ul>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../../js/scrollable.js"></script>
+    <ul id="still" class="scrollable wheel"></ul>
+    <script src="../../profile/js/scrollable.js"></script>
 </body>
 
 </html>

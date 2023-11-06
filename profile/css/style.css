@@ -4,7 +4,8 @@ body {
 }
 
 input[type="radio"],
-#appreciate section a[hidden] {
+#appreciate section a[hidden],
+#appreciate section button[hidden] {
     display: none;
 }
 
@@ -33,8 +34,8 @@ button,
     padding: 0.25rem 0.5rem;
 }
 
-#appreciate section a {
-    color: #000;
+#appreciate section a,
+#appreciate section button {
     text-decoration: none;
     padding: 0.75rem 1rem;
 }
@@ -45,14 +46,14 @@ strong {
     font-weight: 500;
 }
 
-button {
+button,
+#appreciate section a {
     border: 1px solid transparent;
     color: #000;
     transition: 2.5s all;
 }
 
-#index label,
-#appreciate section a {
+#index label {
     font-size: 100%;
     border: 1px solid;
     transition: 2.5s all;
@@ -62,14 +63,15 @@ button:hover,
 #index label:hover,
 #index input[type="radio"]:checked+label {
     color: #fff;
-    cursor: pointer;
-    transition: 1.5s all;
     background: red;
-    border: 1px solid red;
 }
 
+button:hover,
+#index label:hover,
+#index input[type="radio"]:checked+label,
 #appreciate section a:hover {
-    color: red;
+    border: 1px solid red;
+    cursor: pointer;
     transition: 1.5s all;
 }
 
@@ -97,7 +99,7 @@ h1:hover {
 #appreciate {
     font-size: 100%;
     padding: 0 7.5% 0 0;
-    margin: 5% auto;
+    margin: 2.5% auto;
     width: 95.5%;
     max-width: 1550px;
 }
@@ -110,7 +112,9 @@ h1:hover {
     -webkit-justify-content: flex-start;
 }
 
-#appreciate section a {
+#appreciate section a,
+#appreciate section button {
+    text-align: left;
     flex-grow: 1;
     -webkit-flex-grow: 1;
     margin: 0.5rem;
@@ -118,19 +122,22 @@ h1:hover {
 }
 
 @media screen and (max-width: 1200px) {
-    #appreciate section a {
+    #appreciate section a,
+    #appreciate section button {
         width: calc(30% - 1rem);
     }
 }
 
 @media screen and (max-width: 900px) {
-    #appreciate section a {
+    #appreciate section a,
+    #appreciate section button {
         width: calc(50% - 1rem);
     }
 }
 
 @media screen and (max-width: 550px) {
-    #appreciate section a {
+    #appreciate section a,
+    #appreciate section button {
         width: calc(100% - 1rem);
     }
 }
