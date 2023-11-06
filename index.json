@@ -1,53 +1,81 @@
-{ 
-  "appreciate" : [
+{
+  "appreciate": [
     {
-      "value" : "people",
-      "id" : "sign",
-      "title" : "Sign",
-      "name" : "∧° ┐ | creative, community space",
-      "lang" : "ja",
-      "text" : "README.md"
+      "value": "people",
+      "id": "sign",
+      "title": "Sign",
+      "name": "∧° ┐ | creative, community space",
+      "text": [
+        {
+          "lang": "ja",
+          "txt": "sign_ja"
+        },
+        {
+          "lang": "en",
+          "txt": "sign_en"
+        }
+      ]
     },
     {
-      "value" : "object",
-      "id" : "galaxy",
-      "title" : "Galaxy",
-      "name" : "ささじまかずま",
-      "lang" : "ja",
-      "text" : "README.md",
-      "image" : [
+      "value": "object",
+      "id": "galaxy",
+      "title": "Galaxy",
+      "name": "ささじまかずま",
+      "text": [
+        {
+          "lang": "ja",
+          "txt": "galaxy_ja"
+        }
+      ],
+      "image": [
         "cover.png"
       ]
     },
     {
-      "value" : "valuing",
-      "id" : "motto",
-      "title" : "pe.hu",
-      "name" : "ささじまかずま",
-      "lang" : "ja",
-      "text" : "README.md",
-      "image" : [
+      "value": "valuing",
+      "id": "motto",
+      "title": "pe.hu",
+      "name": "ささじまかずま",
+      "text": [
+        {
+          "lang": "ja",
+          "txt": "motto_ja"
+        }
+      ],
+      "image": [
         "image.jpeg"
       ]
     },
     {
-      "value" : "people",
-      "id" : "admiring",
-      "title" : "憧れ",
-      "name" : "芥川亜由弥",
-      "lang" : "ja",
-      "text" : "README.md",
-      "image" : [
+      "value": "people",
+      "id": "admiring",
+      "title": "憧れ",
+      "name": "芥川亜由弥",
+      "text": [
+        {
+          "lang": "ja",
+          "txt": "admiring_ja"
+        },
+        {
+          "lang": "en",
+          "txt": "admiring_en"
+        }
+      ],
+      "image": [
         "cover.jpg"
       ]
     },
     {
-      "value" : "valuing",
-      "id" : "nostalgia",
-      "title" : "懐かしさ",
-      "name" : "千瑛",
-      "lang" : "ja",
-      "text" : "README.md"
+      "value": "valuing",
+      "id": "nostalgia",
+      "title": "懐かしさ",
+      "name": "千瑛",
+      "text": [
+        {
+          "lang": "ja",
+          "txt": "nostalgia_ja"
+        }
+      ]
     }
   ]
 }

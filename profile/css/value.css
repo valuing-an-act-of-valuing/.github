@@ -63,10 +63,6 @@ h3.vertical {
     margin: 1rem 0.5rem;
 }
 
-#text {
-    padding: 1rem 1rem 7.5%;
-}
-
 #links {
     font-size: 90%;
     padding: 0.75rem;
@@ -94,12 +90,21 @@ h1 {
 
 .ja_app {
     font-size: 90%;
+    padding: 1rem 1rem 7.5%;
     margin: 1rem auto;
     width: 85%;
-    height: 75%;
+    height: 85%;
     max-width: 1000px;
     max-height: 700px;
     overflow: auto;
+}
+
+.en_app {
+    font-size: 100%;
+    padding: 1rem;
+    margin: 2.5rem auto 5rem;
+    width: 90%;
+    max-width: 750px;
 }
 
 @media screen and (max-width: 900px) {
@@ -114,16 +119,12 @@ h1 {
     }
 
     .ja_app {
-        margin: 1rem 20% 1rem auto;
+        margin: 1rem 15% 1rem auto;
     }
-}
 
-.en_app {
-    font-size: 100%;
-    padding: 0;
-    margin: 10% auto 15%;
-    width: 75%;
-    max-width: 750px;
+    .en_app {
+        margin: 10% 10% 15% auto;
+    }
 }
 
 header {

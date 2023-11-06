@@ -26,7 +26,6 @@ function indexValue(obj) {
     const button = document.createElement('button')
     button.setAttribute('type', 'button')
     button.setAttribute('data-appreciate', value.value)
-    button.setAttribute('data-lang', value.text)
     button.id = value.id
     button.innerHTML = `
         <strong>${value.title}</strong><br>
@@ -35,13 +34,23 @@ function indexValue(obj) {
     appreciate.appendChild(button)
 
     button.addEventListener('click', () => {
-      const app = document.querySelector('#text')
-      app.className = `${value.lang}_app`
       const h3 = document.createElement('h3')
       h3.className = 'ja vertical'
       h3.innerHTML = `${value.title}<br><small>${value.name}</small>`
-      dialogModal.insertAdjacentElement("afterbegin", h3);
-      fetchMD(`${value.value}/${value.id}/${value.text}`, '#text')
+      dialogModal.insertAdjacentElement("afterbegin", h3)
+
+      const app = document.createElement('article')
+      dialogModal.insertAdjacentElement("beforeend", app)
+
+      const text = value.text
+      for (const i of text) {
+        const section = document.createElement('section')
+        app.appendChild(section)
+        section.className = `${i.lang}_app`
+        section.id = `${i.txt}`
+        fetchMD(`${value.value}/${i.txt}.txt`, `#${i.txt}`)
+      }
+
       openModal()
     })
   }
@@ -49,13 +58,15 @@ function indexValue(obj) {
 
 function readme() {
   const dialogModal = document.querySelector('dialog')
-  const app = document.querySelector('#text')
-  app.className = 'ja_app'
   const h3 = document.createElement('h3')
   h3.id = 'icon'
   h3.innerHTML = "<u>this is</u> a <i>space</i> for <b>valuing an act of valuing</b>"
   dialogModal.insertAdjacentElement("afterbegin", h3);
 
+  const app = document.createElement('article')
+  app.className = 'ja_app'
+  app.id = "text"
+  dialogModal.insertAdjacentElement("beforeend", app);
   fetchMD('profile/README.md', '#text')
   openModal()
 }
@@ -75,8 +86,12 @@ document.addEventListener('readystatechange', event => {
     const closeModal = document.querySelector('dialog button')
     closeModal.addEventListener('click', () => {
       const h3 = document.querySelector('dialog h3')
+      const article = document.querySelector('dialog article')
       if (h3) {
         h3.remove()
+      }
+      if (article) {
+        article.remove()
       }
       dialogModal.close()
     })

@@ -4,8 +4,8 @@ body {
 }
 
 input[type="radio"],
-#appreciate section a[hidden],
-#appreciate section button[hidden] {
+#appreciate div a[hidden],
+#appreciate div button[hidden] {
     display: none;
 }
 
@@ -20,7 +20,7 @@ input[type="radio"],
 
 button,
 #index label,
-#appreciate section a {
+#appreciate div a {
     appearance: none;
     background: transparent;
     border-radius: 0.5rem;
@@ -34,8 +34,8 @@ button,
     padding: 0.25rem 0.5rem;
 }
 
-#appreciate section a,
-#appreciate section button {
+#appreciate div a,
+#appreciate div button {
     text-decoration: none;
     padding: 0.75rem 1rem;
 }
@@ -47,7 +47,7 @@ strong {
 }
 
 button,
-#appreciate section a {
+#appreciate div a {
     border: 1px solid transparent;
     color: #000;
     transition: 2.5s all;
@@ -69,7 +69,7 @@ button:hover,
 button:hover,
 #index label:hover,
 #index input[type="radio"]:checked+label,
-#appreciate section a:hover {
+#appreciate div a:hover {
     border: 1px solid red;
     cursor: pointer;
     transition: 1.5s all;
@@ -104,7 +104,7 @@ h1:hover {
     max-width: 1550px;
 }
 
-#appreciate section {
+#appreciate div {
     display: flex;
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
@@ -112,8 +112,8 @@ h1:hover {
     -webkit-justify-content: flex-start;
 }
 
-#appreciate section a,
-#appreciate section button {
+#appreciate div a,
+#appreciate div button {
     text-align: left;
     flex-grow: 1;
     -webkit-flex-grow: 1;
@@ -122,22 +122,22 @@ h1:hover {
 }
 
 @media screen and (max-width: 1200px) {
-    #appreciate section a,
-    #appreciate section button {
+    #appreciate div a,
+    #appreciate div button {
         width: calc(30% - 1rem);
     }
 }
 
 @media screen and (max-width: 900px) {
-    #appreciate section a,
-    #appreciate section button {
+    #appreciate div a,
+    #appreciate div button {
         width: calc(50% - 1rem);
     }
 }
 
 @media screen and (max-width: 550px) {
-    #appreciate section a,
-    #appreciate section button {
+    #appreciate div a,
+    #appreciate div button {
         width: calc(100% - 1rem);
     }
 }
