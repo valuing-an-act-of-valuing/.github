@@ -105,7 +105,7 @@ document.addEventListener('readystatechange', event => {
     for (let i of filter) {
       i.addEventListener('change', () => {
         let value = i.value
-        let targets = document.querySelectorAll("#appreciate section a, #appreciate section button")
+        let targets = document.querySelectorAll("#appreciate div a, #appreciate div button")
         for (let ii of targets) {
           ii.hidden = false
           let item_data = ii.getAttribute('data-appreciate')
