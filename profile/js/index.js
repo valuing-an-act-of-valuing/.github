@@ -54,9 +54,7 @@ function indexValue(obj) {
       if (value.image) {
         const image = value.image
         for (const i of image) {
-          const img = document.createElement('img')
-          img.src = `${value.value}/img/${i}`
-          app.appendChild(img)
+          dialogModal.style.backgroundImage = `url(${value.value}/img/${i})`
         }
       }
 
@@ -102,6 +100,7 @@ document.addEventListener('readystatechange', event => {
       if (article) {
         article.remove()
       }
+      dialogModal.style.backgroundImage = `url()`
       dialogModal.close()
     })
   } else if (event.target.readyState === 'complete') {
