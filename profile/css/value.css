@@ -127,6 +127,10 @@ h1 {
     }
 }
 
+dialog img {
+    max-width: 100%;
+}
+
 header {
     position: sticky;
     top: 0;

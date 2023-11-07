@@ -28,9 +28,9 @@ function indexValue(obj) {
     button.setAttribute('data-appreciate', value.value)
     button.id = value.id
     button.innerHTML = `
-        <strong>${value.title}</strong><br>
-        <small>${value.name}</small>
-        `;
+    <strong>${value.title}</strong><br>
+    <small>${value.name}</small>
+    `;
     appreciate.appendChild(button)
 
     button.addEventListener('click', () => {
@@ -49,6 +49,15 @@ function indexValue(obj) {
         section.className = `${i.lang}_app`
         section.id = `${i.txt}`
         fetchMD(`${value.value}/${i.txt}.txt`, `#${i.txt}`)
+      }
+
+      if (value.image) {
+        const image = value.image
+        for (const i of image) {
+          const img = document.createElement('img')
+          img.src = `${value.value}/img/${i}`
+          app.appendChild(img)
+        }
       }
 
       openModal()
