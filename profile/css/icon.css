@@ -6,9 +6,9 @@ dialog {
     font-size: 300%;
     font-family: 'Source Serif Pro', serif;
     letter-spacing: 0.1rem;
-    padding: 1rem 2.5rem 1rem 1rem;
-    margin: 2.5rem auto 10rem;
-    width: 95%;
+    padding: 0.5rem 2.5rem 0.5rem 0.5rem;
+    margin: 1rem auto 2.5rem;
+    width: 100%;
     max-width: 550px;
 }
 
@@ -45,8 +45,7 @@ dialog button {
     #icon {
         font-size: 7vw;
         letter-spacing: 0.25vw;
-        padding: 2.5vw 5vw 2.5vw 2.5vw;
-        margin: 5% auto 20%;
+        margin: 2.5% auto 5%;
     }
 
     #icon i {

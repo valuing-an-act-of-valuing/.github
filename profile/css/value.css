@@ -90,6 +90,7 @@ h1 {
     position: fixed;
     top: 0;
     right: 0;
+    width: max-content;
     z-index: 100;
 }
 
