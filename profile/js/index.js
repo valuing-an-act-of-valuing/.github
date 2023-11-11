@@ -39,16 +39,6 @@ function indexValue(obj) {
       h3.innerHTML = `${value.title}<br><small>${value.name}</small>`
       dialogModal.insertAdjacentElement("afterbegin", h3)
 
-      if (value.image) {
-        const bgImg = document.createElement('article')
-        dialogModal.insertAdjacentElement("beforeend", bgImg)
-        bgImg.id = 'bgImg'
-        const image = value.image
-        for (const i of image) {
-          bgImg.style.backgroundImage = `url(${value.value}/img/${i})`
-        }
-      }
-
       const app = document.createElement('article')
       dialogModal.insertAdjacentElement("beforeend", app)
 
@@ -59,6 +49,16 @@ function indexValue(obj) {
         section.className = `${i.lang}_app`
         section.id = `${i.txt}`
         fetchMD(`${value.value}/${i.txt}.txt`, `#${i.txt}`)
+      }
+
+      if (value.image) {
+        const bgImg = document.createElement('article')
+        dialogModal.insertAdjacentElement("beforeend", bgImg)
+        bgImg.id = 'bgImg'
+        const image = value.image
+        for (const i of image) {
+          bgImg.style.backgroundImage = `url(${value.value}/img/${i})`
+        }
       }
 
       openModal()
