@@ -3,6 +3,16 @@ body {
     margin: 0;
 }
 
+footer p {
+    padding: 0.25rem;
+    margin: 0.25rem 0.5rem 0.5rem;
+}
+
+#appreciate div a,
+footer a {
+    text-decoration: none;
+}
+
 input[type="radio"],
 #appreciate div a[hidden],
 #appreciate div button[hidden] {
@@ -10,7 +20,8 @@ input[type="radio"],
 }
 
 #index,
-#appreciate {
+#appreciate,
+footer {
     font-family: 'Source Serif Pro', serif;
 }
 
@@ -36,12 +47,12 @@ button,
 
 #appreciate div a,
 #appreciate div button {
-    text-decoration: none;
     padding: 0.75rem 1rem;
 }
 
 button,
-strong {
+strong,
+footer a {
     font-size: 111%;
     font-weight: 500;
 }
@@ -75,12 +86,18 @@ button:hover,
     transition: 1.5s all;
 }
 
-header nav p {
+header nav p,
+footer {
     display: flex;
     gap: 0.25rem;
     flex-flow: wrap;
     padding: 0;
     margin: 0.25rem 0;
+}
+
+footer {
+    align-items: end;
+    justify-content: space-between;
 }
 
 h1 {
@@ -99,7 +116,8 @@ h1:hover {
 #appreciate {
     font-size: 100%;
     padding: 0 7.5% 0 0;
-    margin: 2.5% auto;
+    margin: 1rem auto;
+    place-self: start;
     width: 95.5%;
     max-width: 1550px;
 }

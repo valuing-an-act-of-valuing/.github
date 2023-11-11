@@ -7,6 +7,11 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    display: grid;
+    min-height: 100vh;
+}
+
 hr {
     border: none;
     padding: 5%;
@@ -80,6 +85,15 @@ h3.vertical {
     font-size: 111%;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    place-self: self-start;
+    padding: 1rem 7.5% 1rem 1rem;
+}
+
 h1 {
     margin: 2.5% 4%;
     position: fixed;
@@ -134,13 +148,4 @@ dialog #bgImg {
     margin: 5% auto 2.5% 2.5%;
     width: 90%;
     height: 90%;
-}
-
-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 0.25rem 2.5rem 0.25rem 0.25rem;
-    margin: 2.5%;
 }
