@@ -3,6 +3,10 @@ body {
     margin: 0;
 }
 
+header {
+    padding: 1rem 10% 1rem 1rem;
+}
+
 footer p {
     padding: 0.25rem;
     margin: 0.25rem 0.5rem 0.5rem;
@@ -95,6 +99,14 @@ footer {
     margin: 0.25rem 0;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    place-self: self-start;
+}
+
 footer {
     align-items: end;
     justify-content: space-between;
@@ -116,7 +128,7 @@ h1:hover {
 #appreciate {
     font-size: 100%;
     padding: 0 7.5% 0 0;
-    margin: 1rem auto;
+    margin: 0 auto 1rem;
     place-self: start;
     width: 95.5%;
     max-width: 1550px;

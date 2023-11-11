@@ -85,15 +85,6 @@ h3.vertical {
     font-size: 111%;
 }
 
-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    place-self: self-start;
-    padding: 1rem 7.5% 1rem 1rem;
-}
-
 h1 {
     margin: 2.5% 4%;
     position: fixed;
