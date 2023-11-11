@@ -127,10 +127,13 @@ h1 {
     }
 }
 
-dialog {
+dialog #bgImg {
     background-position: bottom left;
     background-repeat: no-repeat;
     background-size: contain;
+    margin: 2.5% auto 2.5% 2.5%;
+    width: 90%;
+    height: 95%;
 }
 
 header {

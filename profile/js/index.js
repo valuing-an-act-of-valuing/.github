@@ -39,6 +39,16 @@ function indexValue(obj) {
       h3.innerHTML = `${value.title}<br><small>${value.name}</small>`
       dialogModal.insertAdjacentElement("afterbegin", h3)
 
+      if (value.image) {
+        const bgImg = document.createElement('article')
+        dialogModal.insertAdjacentElement("beforeend", bgImg)
+        bgImg.id = 'bgImg'
+        const image = value.image
+        for (const i of image) {
+          bgImg.style.backgroundImage = `url(${value.value}/img/${i})`
+        }
+      }
+
       const app = document.createElement('article')
       dialogModal.insertAdjacentElement("beforeend", app)
 
@@ -49,13 +59,6 @@ function indexValue(obj) {
         section.className = `${i.lang}_app`
         section.id = `${i.txt}`
         fetchMD(`${value.value}/${i.txt}.txt`, `#${i.txt}`)
-      }
-
-      if (value.image) {
-        const image = value.image
-        for (const i of image) {
-          dialogModal.style.backgroundImage = `url(${value.value}/img/${i})`
-        }
       }
 
       openModal()
@@ -92,15 +95,10 @@ document.addEventListener('readystatechange', event => {
     const dialogModal = document.querySelector('dialog')
     const closeModal = document.querySelector('dialog button')
     closeModal.addEventListener('click', () => {
-      const h3 = document.querySelector('dialog h3')
-      const article = document.querySelector('dialog article')
-      if (h3) {
-        h3.remove()
+      const all = document.querySelectorAll('dialog h3, dialog article')
+      for (let i of all) {
+        i.remove()
       }
-      if (article) {
-        article.remove()
-      }
-      dialogModal.style.backgroundImage = `url()`
       dialogModal.close()
     })
   } else if (event.target.readyState === 'complete') {
