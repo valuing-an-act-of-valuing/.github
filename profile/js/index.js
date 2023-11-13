@@ -48,7 +48,7 @@ function indexValue(obj) {
         app.appendChild(section)
         section.className = `${i.lang}_app`
         section.id = `${i.txt}`
-        fetchMD(`${value.value}/${i.txt}.txt`, `#${i.txt}`)
+        fetchMD(`www/${value.value}/${i.txt}.txt`, `#${i.txt}`)
       }
 
       if (value.image) {
@@ -57,7 +57,7 @@ function indexValue(obj) {
         bgImg.id = 'bgImg'
         const image = value.image
         for (const i of image) {
-          bgImg.style.backgroundImage = `url(${value.value}/img/${i})`
+          bgImg.style.backgroundImage = `url(www/${value.value}/img/${i})`
         }
       }
 
