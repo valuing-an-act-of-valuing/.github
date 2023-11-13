@@ -45,7 +45,7 @@ body,
 .img_000 {
   background-image: url(img/000.jpg);
   background-size: 100%;
-  top: 95%;
+  top: 111%;
   left: 0;
   z-index: -5;
 }
@@ -53,7 +53,7 @@ body,
 .img_004 {
   background-image: url(img/004.JPG);
   background-size: 100%;
-  top: 333%;
+  top: 350%;
   right: 5%;
   z-index: -2;
 }
@@ -61,7 +61,7 @@ body,
 .img_005 {
   background-image: url(img/005.JPG);
   background-size: 75%;
-  top: 222%;
+  top: 250%;
   left: 0%;
   z-index: -1;
 }
@@ -69,7 +69,7 @@ body,
 .img_006 {
   background-image: url(img/006.JPG);
   background-size: 90%;
-  top: 250%;
+  top: 275%;
   right: 20%;
   z-index: -3;
 }
@@ -77,7 +77,7 @@ body,
 .img_007 {
   background-image: url(img/007.JPG);
   background-size: 100%;
-  top: 250%;
+  top: 275%;
   left: 10%;
   z-index: -2;
 }
@@ -85,7 +85,7 @@ body,
 .img_008 {
   background-image: url(img/008.JPG);
   background-size: 100%;
-  top: 200%;
+  top: 222%;
   left: 10%;
   z-index: -3;
 }
@@ -93,7 +93,7 @@ body,
 .img_009 {
   background-image: url(img/009.JPG);
   background-size: 125%;
-  top: 250%;
+  top: 275%;
   right: 10%;
   z-index: -4;
 }
