@@ -1,4 +1,4 @@
-#form {
+form {
     padding: 2.5% 10% 5% 2.5%;
     margin: auto;
     max-width: 750px;
@@ -45,7 +45,7 @@ form button[type="submit"] {
 }
 
 @media screen and (max-width: 750px) {
-    #form {
+    form {
         font-size: 3vw;
     }
 }
