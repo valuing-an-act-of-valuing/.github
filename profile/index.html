@@ -21,10 +21,6 @@
         const dialogModal = document.querySelector('dialog')
         const closeModal = document.querySelector('dialog button')
         closeModal.addEventListener('click', () => {
-          const all = document.querySelectorAll('dialog h3, dialog article')
-          for (let i of all) {
-            i.remove()
-          }
           dialogModal.close()
         })
       } else if (event.target.readyState === 'complete') {
