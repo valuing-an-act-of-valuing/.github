@@ -7,7 +7,7 @@ app.use(express.static('profile'))
 
 /* 基本的なルーティング */
 // GETリクエストを処理する
-app.get('/online', (req, res) => {
+app.get('../online', (req, res) => {
     console.log(req.query)
     res.send(req.query)
 })
@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // POSTリクエストを処理する
-app.post('/thankyou', (req, res) => {
+app.post('../thankyou', (req, res) => {
     console.log(req.body);
     res.status(200).json({
       yourValue: `${req.body.yourValue}`,
