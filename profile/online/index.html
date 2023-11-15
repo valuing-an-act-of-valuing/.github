@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <script src="../js/index.js"></script>
+    <script src="../js/fetch.js"></script>
+    <script>
+        indexJson("index.json")
+    </script>
+
+    <!--og:meta-->
+    <meta content="website" property="og:type">
+    <title>あなたの大切なものは何ですか？</title>
+    <meta content="あなたの大切なものは何ですか？" property="og:title">
+    <meta content="Q. What do you value?" name="description">
+    <meta content="Q. What do you value?" name="og:description">
+
+    <!--for Twitter-->
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="https://creative-community.space/value/online/" property="og:url">
+    <meta content="https://creative-community.space/value/card.png" property="og:image">
+    <meta content="https://creative-community.space/value/card.png" name="twitter:image:src">
+
+    <link rel="icon" href="https://pe-hu.github.io/ver/icon/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,700;1,600&display=swap">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/icon.css">
+    <link rel="stylesheet" href="../css/value.css">
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+
+<body>
+    <header>
+        <h1>あなたの大切なものは何ですか？</h1>
+        <h2>
+            Index /
+            <button type="button">valuing an act of valuing</button>
+        </h2>
+        <nav id="index">
+            <p>
+                <input id="thing" value="thing" type="radio" name="index">
+                <label for="thing">thing</label>
+                <input id="object" value="object" type="radio" name="index">
+                <label for="object">object</label>
+                <input id="people" value="people" type="radio" name="index">
+                <label for="people">people</label>
+                <input id="valuing" value="valuing" type="radio" name="index">
+                <label for="valuing">valuing</label>
+                <input id="all" value="all" type="radio" name="index" checked>
+                <label for="all">view all</label>
+            </p>
+        </nav>
+    </header>
+
+    <main id="appreciate">
+        <div id="value"></div>
+    </main>
+
+    <form action='/thankyou' method='POST' name="value" hidden>
+        <h2 id="icon">
+            <u>this is</u> a
+            <i>entry form</i> for
+            <b>valuing an act of valuing</b>
+        </h2>
+        <p>
+            <label for="yourValue">What do you value?</label><br />
+            <input type="text" id="yourValue" name="yourValue" placeholder="あなたの大切なものは何ですか？" required>
+        </p>
+        <fieldset>
+            <legend>
+                Text by
+                <input type="radio" id="ja" name="yourLan" value="ja" required>
+                <label for="ja">日本語</label>
+                <input type="radio" id="en" name="yourLan" value="en" required>
+                <label for="en">English</label>
+                <input type="radio" id="other" name="yourLan" value="other" required>
+                <label for="other">Other Language</label>
+            </legend>
+            <textarea id="valuText" name="valuText" rows="12.5" required></textarea>
+        </fieldset>
+        <button type="submit">Submit 投稿</button>
+    </form>
+
+    <footer>
+        <p>
+            <a href="https://pehu.creative-community.space/" target="_blank">∧° ┐</a> |
+            creative, community space
+        </p>
+    </footer>
+
+    <dialog>
+        <button type="button">×</button>
+    </dialog>
+</body>
+
+</html>

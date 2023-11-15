@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+  <script src="js/fetch.js"></script>
+  <script>
+    function openModal() {
+      const dialogModal = document.querySelector('dialog')
+      if (typeof dialogModal.showModal === "function") {
+        dialogModal.showModal()
+      } else {
+        alert("The <dialog> API is not supported by this browser")
+      }
+    }
+    
+    document.addEventListener('readystatechange', event => {
+      if (event.target.readyState === 'interactive') {
+        const dialogModal = document.querySelector('dialog')
+        const closeModal = document.querySelector('dialog button')
+        closeModal.addEventListener('click', () => {
+          const all = document.querySelectorAll('dialog h3, dialog article')
+          for (let i of all) {
+            i.remove()
+          }
+          dialogModal.close()
+        })
+      } else if (event.target.readyState === 'complete') {
+        fetchMD('README.md', '#readme')
+      }
+    });
+  </script>
+
+  <!--og:meta-->
+  <meta content="website" property="og:type">
+  <title>大切にすることを大切にするための場所</title>
+  <meta content="大切にすることを大切にするための場所" property="og:title">
+  <meta content="this is a space for valuing an act of valuing" name="description">
+  <meta content="this is a space for valuing an act of valuing" name="og:description">
+
+  <!--for Twitter-->
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="https://creative-community.space/value/" property="og:url">
+  <meta content="https://creative-community.space/value/card.png" property="og:image">
+  <meta content="https://creative-community.space/value/card.png" name="twitter:image:src">
+
+  <!--Icons-->
+  <link rel="icon" href="https://pe-hu.github.io/ver/icon/favicon.png">
+  <link rel="icon" href="https://pe-hu.github.io/ver/icon/android.png" sizes="192x192">
+  <link rel="apple-touch-icon-precomposed" href="https://pe-hu.github.io/ver/icon/ios.png" sizes="180x180">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,700;1,600&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/icon.css">
+  <link rel="stylesheet" href="css/value.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+  <header>
+    <h1 onclick="openModal()">大切にすることを大切にするための場所</h1>
+    <h2>
+      Index /
+      <button type="button" onclick="openModal()">valuing an act of valuing</button>
+    </h2>
+  </header>
+
+  <form action='/online' method='GET'>
+    <p>
+      <label for="yourName">Your Name</label><br />
+      <input type="text" id="yourName" name="yourName" placeholder="名前" required>
+    </p>
+    <p>
+      <label for="yourEmail">Your Email</label><br />
+      <input type="email" id="yourEmail" name="yourEmail" placeholder="メールアドレス" required>
+    </p>
+    <br>
+    <button type="submit">Enter</button>
+  </form>
+
+  <footer>
+    <p>
+      <a href="https://pehu.creative-community.space/" target="_blank">∧° ┐</a> |
+      creative, community space
+    </p>
+  </footer>
+
+  <dialog>
+    <button type="button">×</button>
+    <h3 id="icon">
+      <u>this is</u> a <i>space</i> for <b>valuing an act of valuing</b>
+    </h3>
+    <div id="readme" class="ja_app"></div>
+  </dialog>
+</body>
+
+</html>

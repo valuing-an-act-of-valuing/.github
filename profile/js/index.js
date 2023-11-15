@@ -48,7 +48,7 @@ function indexValue(obj) {
         app.appendChild(section)
         section.className = `${i.lang}_app`
         section.id = `${i.txt}`
-        fetchMD(`www/${value.value}/${i.txt}.txt`, `#${i.txt}`)
+        fetchMD(`${value.value}/${i.txt}.txt`, `#${i.txt}`)
       }
 
       if (value.image) {
@@ -57,28 +57,13 @@ function indexValue(obj) {
         bgImg.id = 'bgImg'
         const image = value.image
         for (const i of image) {
-          bgImg.style.backgroundImage = `url(www/${value.value}/img/${i})`
+          bgImg.style.backgroundImage = `url(${value.value}/img/${i})`
         }
       }
 
       openModal()
     })
   }
-}
-
-function readme() {
-  const dialogModal = document.querySelector('dialog')
-  const h3 = document.createElement('h3')
-  h3.id = 'icon'
-  h3.innerHTML = "<u>this is</u> a <i>space</i> for <b>valuing an act of valuing</b>"
-  dialogModal.insertAdjacentElement("afterbegin", h3);
-
-  const app = document.createElement('article')
-  app.className = 'ja_app'
-  app.id = "text"
-  dialogModal.insertAdjacentElement("beforeend", app);
-  fetchMD('profile/README.md', '#text')
-  openModal()
 }
 
 function openModal() {

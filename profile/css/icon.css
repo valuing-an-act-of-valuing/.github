@@ -45,6 +45,7 @@ dialog button {
     #icon {
         font-size: 7vw;
         letter-spacing: 0.25vw;
+        padding: 1% 5% 1% 1%;
         margin: 2.5% auto 5%;
     }
 
