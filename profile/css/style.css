@@ -19,13 +19,14 @@ footer a {
 }
 
 header input[type="radio"],
-.hiddeen #appreciate,
+.hidden #index,
+.hidden #appreciate,
 #appreciate div a[hidden],
 #appreciate div button[hidden] {
     display: none;
 }
 
-.hiddeen #form {
+.hidden form {
     display: block;
 }
 

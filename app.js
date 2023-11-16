@@ -1,5 +1,3 @@
-npm start
-
 // Express モジュールをインポート
 const express = require('express')
 const app = express()
