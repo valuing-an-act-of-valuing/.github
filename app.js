@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 
 // Express での静的ファイルの提供
-app.use('/value', express.static('profile'))
+app.use(express.static('profile'))
 
 /* 基本的なルーティング */
 // GETリクエストを処理する
