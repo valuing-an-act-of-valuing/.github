@@ -87,6 +87,11 @@ document.addEventListener('readystatechange', event => {
       dialogModal.close()
     })
   } else if (event.target.readyState === 'complete') {
+    const h1 = document.querySelector('h1')
+    h1.addEventListener('click', () => {
+      document.body.classList.toggle("hidden")
+    })
+
     const title = document.querySelector('header h2 button')
     title.addEventListener('click', () => {
       location.reload()
