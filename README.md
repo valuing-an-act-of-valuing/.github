@@ -1,4 +1,7 @@
 [Node.js 版 Hello world](https://nodejs.keicode.com/nodejs/hello-nodejs.php)
+* mkdir ディレクトリを作成
+* rmdir ディレクトリを削除
+* cd ディレクトリへ移動
 
 [$ npm install express --save](https://expressjs.com/ja/)
 * [Express/Node の紹介](https://developer.mozilla.org/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
