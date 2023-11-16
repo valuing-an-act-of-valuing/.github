@@ -10,10 +10,6 @@
 * [body-parser で フォームからの POST データを受け取る方法](https://nodejs.keicode.com/nodejs/body-parser-form.php)
 
 
-[npm install express-generator -g](https://expressjs.com/ja/starter/generator.html)
-* [スケルトン Web サイトの作成](https://developer.mozilla.org/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-
-
 nodeを終了する方法(コマンド)
 * .exit
 * Ctrl + d

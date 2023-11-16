@@ -2,16 +2,17 @@
 const express = require('express')
 const app = express()
 
+const port = 3000;
+
 // Express での静的ファイルの提供
 app.use(express.static('profile'))
 
 /* 基本的なルーティング */
 // GETリクエストを処理する
-app.get('../online', (req, res) => {
+app.get('./online', (req, res) => {
     console.log(req.query)
     res.send(req.query)
 })
-
 
 // body-parser で フォームからの POST データを受け取る方法
 const bodyParser = require('body-parser');
@@ -20,7 +21,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // POSTリクエストを処理する
-app.post('../thankyou', (req, res) => {
+app.post('./thankyou', (req, res) => {
     console.log(req.body);
     res.status(200).json({
       yourValue: `${req.body.yourValue}`,
@@ -29,8 +30,7 @@ app.post('../thankyou', (req, res) => {
     });
 })
 
-
 // サーバーを起動
-const port = 3000;
-app.listen(port, () => 
-console.log(`Listening on http://localhost:${port}/`))
+app.listen(port, function () {
+  console.log(`Listening on http://localhost:${port}/`);
+});
