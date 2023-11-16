@@ -1,7 +1,4 @@
 [Node.js 版 Hello world](https://nodejs.keicode.com/nodejs/hello-nodejs.php)
-* mkdir ディレクトリを作成
-* rmdir ディレクトリを削除
-* cd ディレクトリへ移動
 
 [$ npm install express --save](https://expressjs.com/ja/)
 * [Express/Node の紹介](https://developer.mozilla.org/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
@@ -11,14 +8,3 @@
 
 [$ npm install body-parser](https://nodejs.keicode.com/nodejs/body-parser.php)
 * [body-parser で フォームからの POST データを受け取る方法](https://nodejs.keicode.com/nodejs/body-parser-form.php)
-
-
-nodeを終了する方法(コマンド)
-* .exit
-* Ctrl + d
-* Ctrl + c を 2回入力
-* Ctrl + c の次に　Ctrl + d
-
-___
-
-* [Learning with VS Code on Chromebooks](https://code.visualstudio.com/blogs/2020/12/03/chromebook-get-started)
