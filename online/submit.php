@@ -17,16 +17,15 @@ $output = array(
   '"' . $data["valuText"] . '"'
 );
 
-$to = $data["yourEmail"];
+$to = "pehu@creative-community.space";
 $title = "あなたの大切なものはなんですか？";
-$message = $data["yourValue"];
-$message .= " by ";
-$message .= $data["yourName"];
-$message .= "\r\n";
+$title = $data["yourValue"];
+$title .= " by ";
+$title .= $data["yourName"];
 $message .= $data["valuText"];
-$headers = "From: pehu@creative-community.space";
-$headers .= "\r\n";
-$headers .= "Bcc: we.are.pe.hu@gmail.com";
+$message .= "\r\n";
+$message .= $data["yourEmail"];
+$headers = "From: we.are.pe.hu@gmail.com";
 
 if (mb_send_mail($to, $title, $message, $headers)) {
   echo "メール送信成功です";
