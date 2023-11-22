@@ -5,14 +5,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
-    <script src="../profile/js/publication.js"></script>
-    <script src="../profile/js/fetch.js"></script>
+    <script src="index.js"></script>
+    <script src="../online/js/fetch.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             publication("index.json")
-            fetchMD('README.md', '#credit')
-            fetchHTML('still/mousedragscrollable.html', '#still')
+            fetchMD('README.md', '#readme')
             fetchHTML('advertisement.html', '#advertisement')
+            fetchHTML('still/mousedragscrollable.html', '#still')
 
             // URLのアンカー（#以降の部分）を取得
             const urlHash = location.hash;
@@ -44,14 +44,18 @@
     <meta content="https://creative-community.space/value/book/img/book.png" property="og:image">
     <meta content="https://creative-community.space/value/book/img/book.png" name="twitter:image:src">
 
-    <link rel="icon" href="https://pe-hu.github.io/ver/icon/favicon.png">
+    <!--Icons-->
+    <link rel="icon" href="https://pehu.creative-community.space/icon/favicon.png">
+    <link rel="icon" href="https://pehu.creative-community.space/icon/android.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://pehu.creative-community.space/icon/ios.png" sizes="180x180">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,700;1,600&display=swap">
-    <link rel="stylesheet" href="../profile/css/icon.css">
-    <link rel="stylesheet" href="../profile/css/value.css">
-    <link rel="stylesheet" href="../profile/css/scrollable.css" />
+    <link rel="stylesheet" href="../online/css/icon.css">
+    <link rel="stylesheet" href="../online/css/value.css">
+    <link rel="stylesheet" href="../online/css/scrollable.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="still/style.css" />
 </head>
@@ -60,6 +64,7 @@
     <header>
         <h1>大切にすることを大切にするための本</h1>
     </header>
+
     <h2 id="icon">
         <i>the book</i>
         for<br />
@@ -77,8 +82,10 @@
             <br />
             <h3>"What do you value?"</h3>
             <p>
-                This book gathers 38 unique answers for this simple question from artists, musicians, designers, and art directors.<br>
-                We published this book hoping to provide readers with hints to admire their valuables better by reading the answers.
+                This book gathers 38 unique answers for this simple question from artists, musicians, designers, and art
+                directors.<br>
+                We published this book hoping to provide readers with hints to admire their valuables better by reading
+                the answers.
             </p>
         </section>
 
@@ -100,8 +107,6 @@
             <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit"
                 title="PayPal - The safer, easier way to pay online!" alt="Add to Cart" />
         </form>
-
-        <section id="credit" class="ja_app"></section>
         <section class="en_app">
             <h3 class="ja" style="text-align:center;">参加者</h3>
             <p class="ja">
@@ -112,6 +117,7 @@
             </p>
         </section>
     </article>
+    <section id="readme" class="ja_app"></section>
     <article>
         <section class="en_app">
             <h3>
@@ -124,7 +130,7 @@
 
     <ul id="still" class="scrollable wheel" hidden></ul>
     <ul id="advertisement" class="scrollable wheel"></ul>
-    <script src="../profile/js/scrollable.js"></script>
+    <script src="../online/js/scrollable.js"></script>
 
     <main id="parallax">
         <span class="img_000"></span>

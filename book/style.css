@@ -1,16 +1,7 @@
-body,
-#parallax {
-  overflow-x: hidden;
-}
-
 #parallax,
 #parallax span {
   padding: 0;
   margin: 0;
-}
-
-#parallax {
-  max-width: 100vw;
 }
 
 #parallax span {

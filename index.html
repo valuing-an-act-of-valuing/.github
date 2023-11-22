@@ -5,7 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <script src="js/fetch.js"></script>
+  <script src="online/js/fetch.js"></script>
+  <script src="online/js/enter.js"></script>
   <script>
     function openModal() {
       const dialogModal = document.querySelector('dialog')
@@ -15,7 +16,7 @@
         alert("The <dialog> API is not supported by this browser")
       }
     }
-    
+
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
         const dialogModal = document.querySelector('dialog')
@@ -25,6 +26,7 @@
         })
       } else if (event.target.readyState === 'complete') {
         fetchMD('README.md', '#readme')
+        fetchHTML('footer.html', 'footer')
       }
     });
   </script>
@@ -43,19 +45,19 @@
   <meta content="https://creative-community.space/value/card.png" name="twitter:image:src">
 
   <!--Icons-->
-  <link rel="icon" href="https://pe-hu.github.io/ver/icon/favicon.png">
-  <link rel="icon" href="https://pe-hu.github.io/ver/icon/android.png" sizes="192x192">
-  <link rel="apple-touch-icon-precomposed" href="https://pe-hu.github.io/ver/icon/ios.png" sizes="180x180">
+  <link rel="icon" href="https://pehu.creative-community.space/icon/favicon.png">
+  <link rel="icon" href="https://pehu.creative-community.space/icon/android.png" sizes="192x192">
+  <link rel="apple-touch-icon-precomposed" href="https://pehu.creative-community.space/icon/ios.png" sizes="180x180">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,700;1,600&display=swap">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/icon.css">
-  <link rel="stylesheet" href="css/value.css">
-  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="online/css/style.css">
+  <link rel="stylesheet" href="online/css/icon.css">
+  <link rel="stylesheet" href="online/css/value.css">
+  <link rel="stylesheet" href="online/css/form.css">
 </head>
 
 <body>
@@ -67,7 +69,7 @@
     </h2>
   </header>
 
-  <form action='../online' method='GET'>
+  <form action="../online/" method="POST" name="enter">
     <p>
       <label for="yourName">Your Name</label><br />
       <input type="text" id="yourName" name="yourName" placeholder="名前" required>
@@ -80,20 +82,17 @@
     <button type="submit">Enter</button>
   </form>
 
-  <footer>
-    <p>
-      <a href="https://pehu.creative-community.space/" target="_blank">∧° ┐</a> |
-      creative, community space
-    </p>
-  </footer>
-
   <dialog>
     <button type="button">×</button>
     <h3 id="icon">
-      <u>this is</u> a <i>space</i> for <b>valuing an act of valuing</b>
+      <u>this is</u> a
+      <i>space</i> for
+      <b>valuing an act of valuing</b>
     </h3>
     <div id="readme" class="ja_app"></div>
   </dialog>
+
+  <footer></footer>
 </body>
 
 </html>

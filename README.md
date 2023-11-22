@@ -1,10 +1,9 @@
-[Node.js 版 Hello world](https://nodejs.keicode.com/nodejs/hello-nodejs.php)
+わたしたちが「大切にすること」はただ一つ。
+誰にでもある「何かを大切に思う気持ち」を平等に評価すること。
 
-[$ npm install express --save](https://expressjs.com/ja/)
-* [Express/Node の紹介](https://developer.mozilla.org/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
-* [基本的なルーティング](https://expressjs.com/ja/starter/basic-routing.html)
-* [Express での静的ファイルの提供](https://expressjs.com/ja/starter/static-files.html)
+誰にもわかってもらえないかもしれないけど、自分にとっては大切なことやもの。
+特別な人からの贈り物とか、ずっと使っている愛着のあるものだったり、自慢したいことだったり、もうここにはないけど時々思い出す瞬間とか。
 
+いろいろな人たちの「大切にすること」を知ることが、「大切にすることを大切にする」ための第一歩。
 
-[$ npm install body-parser](https://nodejs.keicode.com/nodejs/body-parser.php)
-* [body-parser で フォームからの POST データを受け取る方法](https://nodejs.keicode.com/nodejs/body-parser-form.php)
+誰からの評価も批判も気にならないほど、大切にすることを大切にするために、いろいろな人たちが大切にすることやものをここに集めます。

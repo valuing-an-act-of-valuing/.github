@@ -5,10 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
-    <script src="../js/index.js"></script>
-    <script src="../js/fetch.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="js/submit.js"></script>
+    <script src="index.js"></script>
     <script>
         indexJson("index.json")
+        fetchHTML('../footer.html', 'footer')
     </script>
 
     <!--og:meta-->
@@ -20,20 +22,24 @@
 
     <!--for Twitter-->
     <meta content="summary_large_image" name="twitter:card">
-    <meta content="https://creative-community.space/value/online/" property="og:url">
+    <meta content="https://creative-community.space/value/index/" property="og:url">
     <meta content="https://creative-community.space/value/card.png" property="og:image">
     <meta content="https://creative-community.space/value/card.png" name="twitter:image:src">
 
-    <link rel="icon" href="https://pe-hu.github.io/ver/icon/favicon.png">
+    <!--Icons-->
+    <link rel="icon" href="https://pehu.creative-community.space/icon/favicon.png">
+    <link rel="icon" href="https://pehu.creative-community.space/icon/android.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://pehu.creative-community.space/icon/ios.png" sizes="180x180">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,700;1,600&display=swap">
 
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/icon.css">
-    <link rel="stylesheet" href="../css/value.css">
-    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/value.css">
+    <link rel="stylesheet" href="css/form.css">
 </head>
 
 <body>
@@ -63,7 +69,7 @@
         <div id="value"></div>
     </main>
 
-    <form action='/thankyou' method='POST' name="value" hidden>
+    <form action="../index.html" method="POST" name="value" hidden>
         <h2 id="icon">
             <u>this is</u> a
             <i>entry form</i> for
@@ -88,16 +94,11 @@
         <button type="submit">Submit 投稿</button>
     </form>
 
-    <footer>
-        <p>
-            <a href="https://pehu.creative-community.space/" target="_blank">∧° ┐</a> |
-            creative, community space
-        </p>
-    </footer>
-
     <dialog>
         <button type="button">×</button>
     </dialog>
+
+    <footer></footer>
 </body>
 
 </html>

@@ -2,7 +2,9 @@ html {
   height: -webkit-fill-available;
 }
 
-body {
+body,
+.scrollable,
+.scrollable li {
   padding: 0;
   margin: 0;
 }
@@ -31,12 +33,6 @@ a:hover  {
 .end {
   width: 100%;
   place-self: end;
-}
-
-.scrollable,
-.scrollable li {
-  margin: 0;
-  padding: 0;
 }
 
 .scrollable::-webkit-scrollbar-thumb,

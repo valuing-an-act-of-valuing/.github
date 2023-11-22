@@ -60,7 +60,6 @@ function indexValue(obj) {
           bgImg.style.backgroundImage = `url(${value.value}/img/${i})`
         }
       }
-
       openModal()
     })
   }
@@ -91,12 +90,10 @@ document.addEventListener('readystatechange', event => {
     h1.addEventListener('click', () => {
       document.body.classList.toggle("hidden")
     })
-
     const title = document.querySelector('header h2 button')
     title.addEventListener('click', () => {
       location.reload()
     })
-
     let filter = document.querySelectorAll('#index input[type="radio"]')
     for (let i of filter) {
       i.addEventListener('change', () => {
