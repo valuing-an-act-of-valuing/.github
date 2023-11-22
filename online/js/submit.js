@@ -12,8 +12,8 @@ document.addEventListener('readystatechange', event => {
             value.value = yourValue;
         }
 
-        if (localStorage.getItem("language")) {
-            const yourLanguage = localStorage.getItem("language");
+        if (localStorage.getItem("yourLan")) {
+            const yourLanguage = localStorage.getItem("yourLan");
             const language = document.querySelector(`#${yourLanguage}`);
             language.checked = true;
         }
@@ -36,6 +36,49 @@ document.addEventListener('readystatechange', event => {
             for (let [name, value] of formData) {
                 localStorage.setItem(name, value);
             }
+
+            form.innerHTML = `
+            <h2 id="icon">
+            <small>投稿完了</small><br>
+            Thank you for Submit
+            </h2>
+            `
+
+            let thisValue = {
+                timestamp: new Date().toLocaleString(),
+                yourName: localStorage.getItem("yourName"),
+                yourEmail: localStorage.getItem("yourEmail"),
+                yourLanguage: document.querySelector("[name='yourLan']").value,
+                yourValue: document.querySelector("[name='yourValue']").value,
+                valuText: document.querySelector("[name='valuText']").value
+            }
+
+            const valueJSON = JSON.stringify(thisValue)
+            async function submitThis() {
+                let url = 'submit.php'
+                let response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json;charset=utf-8'
+                    },
+                    body: valueJSON
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data)
+                    })
+                    .catch(error => {
+                        console.log(error)
+                    });
+            }
+            submitThis()
+            
+            setTimeout(() => {
+                localStorage.removeItem("yourLan");
+                localStorage.removeItem("yourValue");
+                localStorage.removeItem("valuText");
+                location.reload()
+            }, 1500)
         });
     }
 });

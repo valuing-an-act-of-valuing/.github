@@ -20,6 +20,10 @@ dialog {
     font-weight: 600;
 }
 
+#icon small {
+    font-size: 55%;
+}
+
 #icon i {
     letter-spacing: 0.15rem;
 }
