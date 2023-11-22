@@ -31,8 +31,8 @@ document.addEventListener('readystatechange', event => {
         form.addEventListener("submit", (event) => {
             event.preventDefault();
 
-            let formData = new FormData(form);
             // key/value ペアをリストします
+            let formData = new FormData(form);
             for (let [name, value] of formData) {
                 localStorage.setItem(name, value);
             }
@@ -72,7 +72,7 @@ document.addEventListener('readystatechange', event => {
                     });
             }
             submitThis()
-            
+
             setTimeout(() => {
                 localStorage.removeItem("yourLan");
                 localStorage.removeItem("yourValue");
