@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <script src="online/js/fetch.js"></script>
-  <script src="online/js/enter.js"></script>
+  <script src="profile/js/fetch.js"></script>
+  <script src="profile/js/enter.js"></script>
   <script>
     function openModal() {
       const dialogModal = document.querySelector('dialog')
@@ -25,7 +25,7 @@
           dialogModal.close()
         })
       } else if (event.target.readyState === 'complete') {
-        fetchMD('README.md', '#readme')
+        fetchMD('profile/README.md', '#readme')
       }
     });
   </script>
@@ -53,10 +53,10 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,700;1,600&display=swap">
 
-  <link rel="stylesheet" href="online/css/style.css">
-  <link rel="stylesheet" href="online/css/icon.css">
-  <link rel="stylesheet" href="online/css/value.css">
-  <link rel="stylesheet" href="online/css/form.css">
+  <link rel="stylesheet" href="profile/css/style.css">
+  <link rel="stylesheet" href="profile/css/icon.css">
+  <link rel="stylesheet" href="profile/css/value.css">
+  <link rel="stylesheet" href="profile/css/form.css">
 </head>
 
 <body>
@@ -92,12 +92,8 @@
   </dialog>
 
   <footer>
-    <details>
-      <summary>About This Site このサイトについて</summary>
-      <section>
-        aa
-      </section>
-    </details>
+    <span>created by</span>
+    <a href="https://pehu.creative-community.space/" target="_blank">∧° ┐</a>
   </footer>
 </body>
 

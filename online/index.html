@@ -5,12 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
-    <script src="js/fetch.js"></script>
-    <script src="js/submit.js"></script>
+    <script src="../profile/js/fetch.js"></script>
+    <script src="../profile/js/submit.js"></script>
     <script src="index.js"></script>
     <script>
         indexJson("index.json")
-        fetchHTML('../footer.html', 'footer')
     </script>
 
     <!--og:meta-->
@@ -30,16 +29,16 @@
     <link rel="icon" href="https://pehu.creative-community.space/icon/favicon.png">
     <link rel="icon" href="https://pehu.creative-community.space/icon/android.png" sizes="192x192">
     <link rel="apple-touch-icon-precomposed" href="https://pehu.creative-community.space/icon/ios.png" sizes="180x180">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,700;1,600&display=swap">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/icon.css">
-    <link rel="stylesheet" href="css/value.css">
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="../profile/css/style.css">
+    <link rel="stylesheet" href="../profile/css/icon.css">
+    <link rel="stylesheet" href="../profile/css/value.css">
+    <link rel="stylesheet" href="../profile/css/form.css">
 </head>
 
 <body>
@@ -98,7 +97,12 @@
         <button type="button">×</button>
     </dialog>
 
-    <footer></footer>
+    <footer>
+        <details>
+            <summary>お知らせ Topics</summary>
+            <section id="about"></section>
+        </details>
+    </footer>
 </body>
 
 </html>

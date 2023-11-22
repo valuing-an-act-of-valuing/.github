@@ -16,6 +16,7 @@ footer a {
 header input[type="radio"],
 .hidden #index,
 .hidden #appreciate,
+.hidden footer,
 #appreciate div a[hidden],
 #appreciate div button[hidden] {
     display: none;
@@ -58,7 +59,7 @@ button,
 
 button,
 strong,
-footer b {
+footer a {
     font-size: 111%;
     font-weight: 500;
 }

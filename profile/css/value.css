@@ -97,10 +97,10 @@ h1 {
 
 .ja_app {
     font-size: 90%;
-    padding: 1rem 1rem 7.5%;
+    padding: 1rem 1rem 5%;
     margin: 1rem auto;
     width: 85%;
-    height: 85%;
+    height: 75%;
     max-width: 1000px;
     max-height: 700px;
     overflow: auto;
