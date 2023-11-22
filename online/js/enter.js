@@ -11,7 +11,7 @@ document.addEventListener('readystatechange', event => {
         email.value = yourEmail;
 
         if (localStorage.getItem("yourName") && localStorage.getItem("yourEmail")) {
-            location.replace('../online/');
+            location.replace('online/');
         }
     } else if (event.target.readyState === 'complete') {
         // フォームの名前からそのフォームへの参照を取得する
@@ -25,7 +25,7 @@ document.addEventListener('readystatechange', event => {
             for (let [name, value] of formData) {
                 localStorage.setItem(name, value);
             }
-            location.replace('../online/');
+            location.replace('online/');
         });
     }
 });
