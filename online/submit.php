@@ -18,10 +18,12 @@ $output = array(
 );
 
 $to = $data["yourEmail"];
-$title = $data["yourValue"];
-$title .= " by ";
-$title .= $data["yourName"];
-$message = $data["valuText"];
+$title = "あなたの大切なものはなんですか？";
+$message = $data["yourValue"];
+$message .= " by ";
+$message .= $data["yourName"];
+$message .= "\r\n";
+$message .= $data["valuText"];
 $headers = "From: pehu@creative-community.space";
 $headers .= "\r\n";
 $headers .= "Bcc: we.are.pe.hu@gmail.com";
