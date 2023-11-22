@@ -4,6 +4,7 @@ mb_internal_encoding("UTF-8");
 
 $source_file = "submit.csv";
 
+
 define("LOGFILE", $source_file);
 $data = json_decode(file_get_contents("php://input"), true);
 
@@ -15,6 +16,21 @@ $output = array(
   '"' . $data["yourValue"] . '"',
   '"' . $data["valuText"] . '"'
 );
+
+$to = $data["yourEmail"];
+$title = $data["yourValue"];
+$title .= " by ";
+$title .= $data["yourName"];
+$message = $data["valuText"];
+$headers = "From: pehu@creative-community.space";
+$headers .= "\r\n";
+$headers .= "Bcc: we.are.pe.hu@gmail.com";
+
+if (mb_send_mail($to, $title, $message, $headers)) {
+  echo "メール送信成功です";
+} else {
+  echo "メール送信失敗です";
+}
 
 $result = implode(', ', $output);
 file_put_contents(LOGFILE, $result . "\n", FILE_APPEND | LOCK_EX);
