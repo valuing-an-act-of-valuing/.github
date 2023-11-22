@@ -48,9 +48,9 @@ document.addEventListener('readystatechange', event => {
                 timestamp: new Date().toLocaleString(),
                 yourName: localStorage.getItem("yourName"),
                 yourEmail: localStorage.getItem("yourEmail"),
-                yourLanguage: document.querySelector("[name='yourLan']").value,
-                yourValue: document.querySelector("[name='yourValue']").value,
-                valuText: document.querySelector("[name='valuText']").value
+                yourLanguage: localStorage.getItem("yourLan"),
+                yourValue: localStorage.getItem("yourValue"),
+                valuText: localStorage.getItem("valuText")
             }
 
             const valueJSON = JSON.stringify(thisValue)
