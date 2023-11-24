@@ -8,6 +8,14 @@ async function indexJson(requestURL) {
   indexValue(json)
 }
 
+async function fetchMD(url = '', query = '') {
+    fetch(url)
+        .then(response => response.text())
+        .then(md => {
+            document.querySelector(query).innerText = md;
+        });
+}
+
 function shuffle(arrays) {
   const array = arrays.slice()
   for (let i = array.length - 1; i >= 0; i--) {
