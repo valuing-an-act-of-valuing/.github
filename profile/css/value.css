@@ -95,10 +95,14 @@ h3.vertical {
 }
 
 #value button {
+    display: grid;
+    place-items: center;
+    width: 4rem;
+    height: 4rem;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    font-size: 333%;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    font-size: 222%;
 }
 
 #value {
