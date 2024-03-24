@@ -5,15 +5,19 @@ dialog {
 #icon {
     font-size: 300%;
     font-family: 'Source Serif Pro', serif;
+    font-weight: 555;
     letter-spacing: 0.1rem;
     padding: 0.5rem 2.5rem 0.5rem 0.5rem;
-    margin: 1rem auto 2.5rem;
-    width: 100%;
+    margin: 2.5rem auto 5rem;
+    width: 95%;
     max-width: 550px;
 }
 
 #icon b {
     font-weight: 900;
+    -webkit-text-stroke: 0.1rem #000;
+    text-stroke: 0.1rem #000;
+    
 }
 
 #icon u {
@@ -33,7 +37,7 @@ dialog {
     height: 100%;
 }
 
-dialog button {
+#close {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,15 +46,15 @@ dialog button {
     font-size: 200%;
     position: fixed;
     bottom: 1.5rem;
-    right: 1.5rem;
+    left: 1.5rem;
 }
 
 @media screen and (max-width: 750px) {
     #icon {
-        font-size: 7vw;
+        font-size: 5.5vw;
         letter-spacing: 0.25vw;
-        padding: 1% 5% 1% 1%;
-        margin: 2.5% auto 5%;
+        padding: 1% 5.5% 1% 1%;
+        margin: 5% auto 7.5%;
     }
 
     #icon i {

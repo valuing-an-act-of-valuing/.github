@@ -1,13 +1,9 @@
-body {
-    padding: 0;
-    margin: 0;
-}
-
 header {
     padding: 1rem 10% 1rem 1rem;
+    width: 100%;
 }
 
-#appreciate div a,
+main a,
 footer a {
     color: inherit;
     text-decoration: none;
@@ -17,8 +13,8 @@ header input[type="radio"],
 .hidden #index,
 .hidden #appreciate,
 .hidden footer,
-#appreciate div a[hidden],
-#appreciate div button[hidden] {
+main a[hidden],
+#appreciate button[hidden] {
     display: none;
 }
 
@@ -27,8 +23,8 @@ header input[type="radio"],
 }
 
 #index,
-#appreciate,
-footer {
+main,
+#appreciate {
     font-family: 'Source Serif Pro', serif;
 }
 
@@ -38,7 +34,7 @@ footer {
 
 button,
 #index label,
-#appreciate div a {
+main a {
     appearance: none;
     background: transparent;
     border-radius: 0.5rem;
@@ -52,8 +48,8 @@ button,
     padding: 0.25rem 0.5rem;
 }
 
-#appreciate div a,
-#appreciate div button {
+main a,
+#appreciate button {
     padding: 0.75rem 1rem;
 }
 
@@ -65,7 +61,7 @@ footer a {
 }
 
 button,
-#appreciate div a {
+main a {
     border: 1px solid transparent;
     color: #000;
     transition: 2.5s all;
@@ -87,22 +83,17 @@ button:hover,
 button:hover,
 #index label:hover,
 #index input[type="radio"]:checked+label,
-#appreciate div a:hover {
+main a:hover {
     border: 1px solid red;
     cursor: pointer;
     transition: 1.5s all;
 }
 
-header nav p,
+header nav,
 footer {
     display: flex;
     gap: 0.25rem;
     flex-flow: wrap;
-}
-
-header nav p {
-    padding: 0;
-    margin: 0.25rem 0;
 }
 
 header {
@@ -114,10 +105,12 @@ header {
 }
 
 footer {
-    padding: 0.5rem;
-    margin: 0;
     align-items: end;
     justify-content: space-between;
+}
+
+header nav {
+    margin: 0.25rem 0;
 }
 
 h1 {
@@ -133,25 +126,25 @@ h1:hover {
     transition: 1s all;
 }
 
-#appreciate {
-    font-size: 100%;
+main {
     padding: 0 7.5% 0 0;
-    margin: 0 auto 1rem;
-    place-self: start;
-    width: 95.5%;
-    max-width: 1550px;
 }
 
-#appreciate div {
+main,
+#appreciate {
     display: flex;
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     justify-content: flex-start;
     -webkit-justify-content: flex-start;
+    place-self: start;
+    margin: 2rem auto;
+    width: 95.5%;
+    max-width: 1550px;
 }
 
-#appreciate div a,
-#appreciate div button {
+main a,
+#appreciate button {
     text-align: left;
     flex-grow: 1;
     -webkit-flex-grow: 1;
@@ -161,24 +154,24 @@ h1:hover {
 
 @media screen and (max-width: 1200px) {
 
-    #appreciate div a,
-    #appreciate div button {
+    main a,
+    #appreciate button {
         width: calc(30% - 1rem);
     }
 }
 
 @media screen and (max-width: 900px) {
 
-    #appreciate div a,
-    #appreciate div button {
+    main a,
+    #appreciate button {
         width: calc(50% - 1rem);
     }
 }
 
 @media screen and (max-width: 550px) {
 
-    #appreciate div a,
-    #appreciate div button {
+    main a,
+    #appreciate button {
         width: calc(100% - 1rem);
     }
 }

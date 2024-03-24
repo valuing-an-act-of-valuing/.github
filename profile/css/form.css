@@ -1,5 +1,5 @@
 form {
-    padding: 2.5% 7.5% 5% 2.5%;
+    padding: 2.5% 2.5% 5%;
     margin: auto;
     width: 90%;
     max-width: 750px;
@@ -42,6 +42,7 @@ form button[type="submit"] {
     font-family: 'Source Serif Pro', serif;
     font-size: 125%;
     text-align: center;
+    margin-top: 1.5rem;
     width: 100%;
 }
 

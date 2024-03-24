@@ -5,30 +5,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <script src="profile/js/fetch.js"></script>
-  <script src="profile/js/enter.js"></script>
+  <script src="profile/js/index.js"></script>
   <script>
-    function openModal() {
-      const dialogModal = document.querySelector('dialog')
-      if (typeof dialogModal.showModal === "function") {
-        dialogModal.showModal()
-      } else {
-        alert("The <dialog> API is not supported by this browser")
-      }
+    if (localStorage.getItem("yourName") && localStorage.getItem("yourEmail")) {
+      indexJson('index.json')
+    } else {
+      //
     }
-
-    document.addEventListener('readystatechange', event => {
-      if (event.target.readyState === 'interactive') {
-        const dialogModal = document.querySelector('dialog')
-        const closeModal = document.querySelector('dialog button')
-        closeModal.addEventListener('click', () => {
-          dialogModal.close()
-        })
-      } else if (event.target.readyState === 'complete') {
-        fetchMD('profile/README.md', '#readme')
-      }
-    });
   </script>
+  <script src="profile/js/enter.js"></script>
 
   <!--og:meta-->
   <meta content="website" property="og:type">
@@ -60,39 +45,81 @@
 </head>
 
 <body>
+  <h1 onclick="openModal()">大切にすることを大切にするための場所</h1>
   <header>
-    <h1 onclick="openModal()">大切にすることを大切にするための場所</h1>
     <h2>
       Index /
       <button type="button" onclick="openModal()">valuing an act of valuing</button>
     </h2>
+    <nav id="index">
+      <input id="thing" value="thing" type="radio" name="index">
+      <label for="thing">thing</label>
+      <input id="object" value="object" type="radio" name="index">
+      <label for="object">object</label>
+      <input id="people" value="people" type="radio" name="index">
+      <label for="people">people</label>
+      <input id="valuing" value="valuing" type="radio" name="index">
+      <label for="valuing">valuing</label>
+      <input id="all" value="all" type="radio" name="index" checked>
+      <label for="all">view all</label>
+    </nav>
   </header>
 
-  <form action="online/" method="POST" name="enter">
-    <p>
-      <label for="yourName">Your Name</label><br />
-      <input type="text" id="yourName" name="yourName" placeholder="名前" required>
-    </p>
-    <p>
-      <label for="yourEmail">Your Email</label><br />
-      <input type="email" id="yourEmail" name="yourEmail" placeholder="メールアドレス" required>
-    </p>
-    <br>
-    <button type="submit">Enter</button>
-  </form>
+  <main>
+    <a onclick="openModal()">
+      <strong>あなたの大切なものは何ですか？</strong><br>
+      <small>What do you value?</small>
+    </a>
+    <a href="book/">
+      <strong>大切にすることを大切にするための本</strong><br>
+      <small>the book for valuing an act of valuing</small>
+    </a>
+    <a href="book/#still">
+      <strong>今でも大切？</strong><br>
+      <small>this is an answer of the book for valuing an act of valuing</small>
+    </a>
+  </main>
+  <aside id="appreciate"></aside>
 
   <dialog>
-    <button type="button">×</button>
     <h3 id="icon">
       <u>this is</u> a
       <i>space</i> for
       <b>valuing an act of valuing</b>
     </h3>
+    <form action="" method="POST" name="enter">
+      <p>
+        <label for="yourName">Your Name</label><br />
+        <input type="text" id="yourName" name="yourName" placeholder="名前" required>
+      </p>
+      <p>
+        <label for="yourEmail">Your Email</label><br />
+        <input type="email" id="yourEmail" name="yourEmail" placeholder="メールアドレス" required>
+      </p>
+      <p id="title">
+        <label for="yourValue">What do you value?</label><br />
+        <input type="text" id="yourValue" name="yourValue" placeholder="あなたの大切なものは何ですか？" required>
+      </p>
+      <fieldset id="what">
+        <legend>
+          Text by
+          <input type="radio" id="ja" name="yourLan" value="ja" required>
+          <label for="ja">日本語</label>
+          <input type="radio" id="en" name="yourLan" value="en" required>
+          <label for="en">English</label>
+          <input type="radio" id="other" name="yourLan" value="other" required>
+          <label for="other">Other Language</label>
+        </legend>
+        <textarea id="valuText" name="valuText" rows="12.5" required></textarea>
+      </fieldset>
+      <button type="submit">Enter</button>
+    </form>
     <div id="readme" class="ja_app"></div>
+    <button type="button" id="close">×</button>
   </dialog>
 
-  <footer>
-    <span>created by</span>
+  <footer class="en">
+    created by
     <a href="https://pehu.creative-community.space/" target="_blank">∧° ┐</a>
   </footer>
 </body>
