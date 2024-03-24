@@ -86,7 +86,7 @@ document.addEventListener('readystatechange', event => {
                 submitThis()
 
                 setTimeout(() => {
-                    location.assign('profile/')
+                    location.replace('profile/')
                 }, 1500)
             })
         } else {

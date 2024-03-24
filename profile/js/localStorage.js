@@ -5,11 +5,9 @@ document.addEventListener('readystatechange', event => {
         const yourValue = document.querySelector('h1 strong')
         const yourText = document.querySelector('#value')
         const yourName = document.querySelector('h1 small')
-        const yourEmail = document.querySelector('footer a')
 
         if (localStorage.getItem("yourValue") && localStorage.getItem("yourLan") && localStorage.getItem("valuText")) {
             yourName.textContent = localStorage.getItem("yourName")
-            yourEmail.textContent = localStorage.getItem("yourEmail")
             yourValue.textContent = localStorage.getItem("yourValue")
             yourText.innerHTML = localStorage.getItem("valuText").replace(/\n/g, '<br>');
             yourText.className = `${localStorage.getItem("yourLan")}_app`;
