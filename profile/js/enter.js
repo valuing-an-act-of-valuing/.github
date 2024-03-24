@@ -33,8 +33,7 @@ document.addEventListener('readystatechange', event => {
         if (localStorage.getItem("yourValue") && localStorage.getItem("yourLan") && localStorage.getItem("valuText")) {
             yourValue.value = localStorage.getItem("yourValue")
             yourText.value = localStorage.getItem("valuText")
-            const yourLang = localStorage.getItem("yourLan")
-            document.querySelector(`#${yourLang}`).checked;
+            document.querySelector(`#${localStorage.getItem("yourLan")}`).checked = true;
         }
     } else if (event.target.readyState === 'complete') {
         // フォームの名前からそのフォームへの参照を取得する
