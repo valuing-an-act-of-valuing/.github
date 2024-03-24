@@ -10,24 +10,16 @@
         document.addEventListener('DOMContentLoaded', function () {
             publication("index.json")
             fetchMD('README.md', '#readme')
-            fetchHTML('advertisement.html', '#advertisement')
-            fetchHTML('still/mousedragscrollable.html', '#still')
 
             // URLのアンカー（#以降の部分）を取得
             const urlHash = location.hash;
 
-            // URLにアンカーがない場合
             if (urlHash == "#still") {
-                still()
+                fetchHTML('still/mousedragscrollable.html', '#mousedragscrollable')
+            } else {
+                fetchHTML('advertisement.html', '#mousedragscrollable')
             }
         }, false)
-
-        function still() {
-            const still = document.querySelector('#still');
-            const advertisement = document.querySelector('#advertisement');
-            still.hidden = false;
-            advertisement.hidden = true;
-        }
     </script>
 
     <!--og:meta-->
@@ -117,19 +109,6 @@
         </section>
     </article>
     <section id="readme" class="ja_app"></section>
-    <article>
-        <section class="en_app">
-            <h3>
-                <a class="ja" onclick="still()" href="#still">
-                    この本が完成した2019年の11月、時間が経った今でも大切なものは大切なのか、参加者の皆さんに2つの質問を投げかけました。
-                </a>
-            </h3>
-        </section>
-    </article>
-
-    <ul id="still" class="scrollable wheel" hidden></ul>
-    <ul id="advertisement" class="scrollable wheel"></ul>
-    <script src="../profile/js/scrollable.js"></script>
 
     <main id="parallax">
         <span class="img_000"></span>
@@ -161,6 +140,9 @@
     <footer id="links">
         <strong class="en">Distribute</strong><br>
     </footer>
+
+    <ul id="mousedragscrollable" class="scrollable wheel"></ul>
+    <script src="../profile/js/scrollable.js"></script>
 </body>
 
 </html>
