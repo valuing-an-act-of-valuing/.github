@@ -1,7 +1,7 @@
 html {
     font-size: 16px;
-    height: -webkit-fill-available;
     scroll-behavior: smooth;
+    height: -webkit-fill-available;
 }
 
 * {
@@ -110,7 +110,7 @@ h3.vertical {
     padding-right: 2.5rem;
     place-items: center;
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 5rem);
     max-height: -webkit-fill-available;
 }
 
@@ -174,13 +174,4 @@ footer {
     .en_app {
         margin: 10% auto;
     }
-}
-
-dialog #bgImg {
-    background-position: bottom left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 5% auto 2.5% 2.5%;
-    width: 90%;
-    height: 90%;
 }
