@@ -16,18 +16,13 @@
 }
 
 #cover {
-  float: right;
-  display: block;
   margin: 0 2.5% 5%;
-  width: 40%;
-  max-width: 500px;
+  width: 75%;
+  max-width: 750px;
 }
 
 @media screen and (max-width: 750px) {
   #cover {
-      clear: both;
-      float: none;
-      width: 75%;
       margin: auto;
       max-width: 75%;
   }
