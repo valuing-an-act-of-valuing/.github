@@ -23,10 +23,10 @@ function indexValue(obj) {
     for (const value of valueAll) {
         const button = document.createElement('button')
         button.setAttribute('type', 'button')
-        button.setAttribute('data-index', value.value)
+        button.setAttribute('data-index', value.id)
         button.innerHTML = `
         <strong>${value.title}</strong><br>
-        <small>${value.name}</small>
+        <small>${value.by}</small>
         `;
         appreciate.appendChild(button)
         button.addEventListener('click', function () {
@@ -36,7 +36,7 @@ function indexValue(obj) {
 }
 
 function changeHidden() {
-    let allElement = document.querySelectorAll("h1, header, main")
+    let allElement = document.querySelectorAll("h1, header, main, footer")
     for (let chengeAll of allElement) {
         if (chengeAll.hidden === true) {
             chengeAll.hidden = false;
