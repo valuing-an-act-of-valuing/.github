@@ -5,6 +5,8 @@ document.addEventListener('readystatechange', event => {
         const iconI = document.querySelector('#icon i')
         const name = document.querySelector('#yourName')
         const email = document.querySelector('#yourEmail')
+        const yourValue = document.querySelector('#yourValue')
+        const yourText = document.querySelector('#valuText')
         const submitBtn = document.querySelector('form button[type="submit"]')
 
         if (localStorage.getItem("yourName") && localStorage.getItem("yourEmail")) {
@@ -21,6 +23,11 @@ document.addEventListener('readystatechange', event => {
             const yourEmail = localStorage.getItem("yourEmail")
             email.value = yourEmail;
             email.readOnly = true;
+        } else if (localStorage.getItem("yourValue") && localStorage.getItem("yourLan") && localStorage.getItem("valuText")) {
+            yourValue.value = localStorage.getItem("yourValue")
+            yourText.value = localStorage.getItem("valuText")
+            const yourLang = localStorage.getItem("yourLan")
+            document.querySelector(`#${yourLang}`).checked;
         } else {
             let hiddenAll = document.querySelectorAll("#index, #appreciate, #title, #what")
             for (let hiddenThis of hiddenAll) {
