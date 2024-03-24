@@ -14,7 +14,6 @@ document.addEventListener('readystatechange', event => {
             for (let hiddenThis of hiddenAll) {
                 hiddenThis.remove()
             }
-
             iconI.textContent = 'submit form';
             submitBtn.textContent = 'Submit 投稿';
             const yourName = localStorage.getItem("yourName")
@@ -102,4 +101,4 @@ async function fetchMD(url = '', query = '') {
         .then(text => {
             document.querySelector(query).innerText = text
         })
-}ß
+}

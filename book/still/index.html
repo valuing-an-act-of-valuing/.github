@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
     <script src="../../profile/js/publication.js"></script>
-    <script src="../../profile/js/fetch.js"></script>
     <script>
+        async function fetchHTML(url = '', query = '') {
+            fetch(url)
+                .then(response => response.text())
+                .then(el => {
+                    document.querySelector(query).innerHTML = el
+                })
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
             fetchHTML('mousedragscrollable.html', '#still')
         }, false)
