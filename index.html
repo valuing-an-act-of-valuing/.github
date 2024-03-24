@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
   <script src="profile/js/index.js"></script>
+  <script src="profile/js/localStorage.js"></script>
   <script>
     if (localStorage.getItem("yourName") && localStorage.getItem("yourEmail")) {
       indexJson('index.json')
@@ -65,21 +66,33 @@
     </nav>
   </header>
 
-  <main>
-    <a onclick="openModal()">
-      <strong>あなたの大切なものは何ですか？</strong><br>
-      <small>What do you value?</small>
-    </a>
-    <a href="book/">
-      <strong>大切にすることを大切にするための本</strong><br>
-      <small>the book for valuing an act of valuing</small>
-    </a>
-    <a href="book/#still">
-      <strong>今でも大切？</strong><br>
-      <small>this is an answer of the book for valuing an act of valuing</small>
-    </a>
+  <main id="value" hidden>
+    <article>
+      <h3 class="ja vertical">
+        <strong>あなたの大切なものは何ですか？</strong><br />
+        <small>creative, community space ∧° ┐</small>
+      </h3>
+      <section></section>
+    </article>
   </main>
-  <aside id="appreciate"></aside>
+
+  <main>
+    <div id="appreciate"></div>
+    <div>
+      <a onclick="openModal()">
+        <strong>あなたの大切なものは何ですか？</strong><br>
+        <small>What do you value?</small>
+      </a>
+      <a href="book/">
+        <strong>大切にすることを大切にするための本</strong><br>
+        <small>the book for valuing an act of valuing</small>
+      </a>
+      <a href="book/#still">
+        <strong>今でも大切？</strong><br>
+        <small>this is an answer of the book for valuing an act of valuing</small>
+      </a>
+    </div>
+  </main>
 
   <dialog>
     <h3 id="icon">

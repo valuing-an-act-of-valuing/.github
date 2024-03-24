@@ -10,9 +10,9 @@ document.addEventListener('readystatechange', event => {
         const submitBtn = document.querySelector('form button[type="submit"]')
 
         if (localStorage.getItem("yourName") && localStorage.getItem("yourEmail")) {
-            let hiddenAll = document.querySelectorAll("#readme")
-            for (let hiddenThis of hiddenAll) {
-                hiddenThis.remove()
+            let removeAll = document.querySelectorAll("#readme")
+            for (let removeThis of removeAll) {
+                removeThis.remove()
             }
             iconI.textContent = 'web form';
             submitBtn.textContent = 'Submit 投稿';
@@ -23,9 +23,9 @@ document.addEventListener('readystatechange', event => {
             email.value = yourEmail;
             email.readOnly = true;
         } else {
-            let hiddenAll = document.querySelectorAll("#index, #appreciate, #title, #what")
-            for (let hiddenThis of hiddenAll) {
-                hiddenThis.remove()
+            let removeAll = document.querySelectorAll("#index, #appreciate, #title, #what")
+            for (let removeThis of removeAll) {
+                removeThis.remove()
             }
             fetchMD('profile/README.md', '#readme')
         }

@@ -1,80 +1,47 @@
 {
   "appreciate": [
     {
-      "value": "valuing",
-      "id": "nostalgia",
+      "id": "valuing",
+      "name": "nostalgia",
       "title": "懐かしさ",
-      "name": "千瑛",
-      "text": [
-        {
-          "lang": "ja",
-          "txt": "nostalgia_ja"
-        }
-      ]
+      "by": "千瑛",
+      "lang": "ja"
     },
     {
-      "value": "people",
-      "id": "admiring",
+      "id": "people",
+      "name": "admiring",
       "title": "憧れ",
-      "name": "芥川亜由弥",
-      "text": [
-        {
-          "lang": "ja",
-          "txt": "admiring_ja"
-        },
-        {
-          "lang": "en",
-          "txt": "admiring_en"
-        }
-      ],
+      "by": "芥川亜由弥",
+      "lang": "ja",
       "image": [
         "admiring.jpg"
       ]
     },
     {
-      "value": "thing",
-      "id": "motto",
-      "title": "pe.hu",
-      "name": "ささじまかずま",
-      "text": [
-        {
-          "lang": "ja",
-          "txt": "motto_ja"
-        }
-      ],
-      "image": [
-        "motto.jpeg"
-      ]
-    },
-    {
-      "value": "object",
-      "id": "galaxy",
+      "id": "object",
+      "name": "galaxy",
       "title": "Galaxy",
-      "name": "ささじまかずま",
-      "text": [
-        {
-          "lang": "ja",
-          "txt": "galaxy_ja"
-        }
-      ],
+      "by": "ささじまかずま",
+      "lang": "ja",
       "image": [
         "galaxy.png"
       ]
     },
     {
-      "value": "people",
-      "id": "sign",
+      "id": "people",
+      "name": "sign",
       "title": "Sign",
-      "name": "∧° ┐ | creative, community space",
-      "text": [
-        {
-          "lang": "ja",
-          "txt": "sign_ja"
-        },
-        {
-          "lang": "en",
-          "txt": "sign_en"
-        }
+      "by": "creative, community space ∧° ┐",
+      "lang": "ja"
+    },
+    {
+      "id": "thing",
+      "name": "motto",
+      "title": ".pe.hu",
+      "by": "creative, community space ∧° ┐",
+      "lang": "ja",
+      "image": [
+        "motto.jpeg"
       ]
     }
   ]

@@ -2,9 +2,9 @@
 
 document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'interactive') {
-        const yourValue = document.querySelector('h1 strong')
-        const yourText = document.querySelector('#value')
-        const yourName = document.querySelector('h1 small')
+        const yourName = document.querySelector('#value small')
+        const yourValue = document.querySelector('#value strong')
+        const yourText = document.querySelector('#value section')
 
         if (localStorage.getItem("yourValue") && localStorage.getItem("yourLan") && localStorage.getItem("valuText")) {
             yourName.textContent = localStorage.getItem("yourName")
