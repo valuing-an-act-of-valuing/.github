@@ -48,7 +48,7 @@ dialog {
 
 @media screen and (max-width: 750px) {
     #icon {
-        font-size: 5.5vw;
+        font-size: 7.5vw;
         letter-spacing: 0.25vw;
         padding: 1% 5.5% 1% 1%;
         margin: 5% auto 7.5%;
