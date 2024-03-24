@@ -36,7 +36,7 @@ function indexValue(obj) {
 }
 
 function changeHidden() {
-    let allElement = document.querySelectorAll("main")
+    let allElement = document.querySelectorAll("h1, header, main")
     for (let chengeAll of allElement) {
         if (chengeAll.hidden === true) {
             chengeAll.hidden = false;

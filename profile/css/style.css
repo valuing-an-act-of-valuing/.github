@@ -9,10 +9,8 @@ footer a {
     text-decoration: none;
 }
 
-header input[type="radio"],
-main[hidden],
-main div a[hidden],
-main div button[hidden] {
+[hidden],
+header input[type="radio"] {
     display: none;
 }
 
