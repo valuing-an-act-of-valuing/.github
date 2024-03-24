@@ -113,7 +113,7 @@ h1 {
 }
 
 article#value {
-    padding: 5% 7.5rem 5% 2rem;
+    padding: 5%;
 }
 
 .ja_app {
@@ -148,13 +148,17 @@ footer {
     }
 
     article#value {
-        padding: 12.5% 15% 5% 5%;
+        padding: 12.5% 10% 5% 10%;
     }
 }
 
 @media screen and (max-width: 550px) {
     .en_app {
         margin: 10% auto;
+    }
+
+    article#value {
+        padding: 12.5% 15% 5% 5%;
     }
 }
 

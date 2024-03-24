@@ -31,6 +31,29 @@
 
     <link rel="stylesheet" href="../profile/css/value.css">
     <script src="index.js"></script>
+    <script>
+        // URLのパラメータを取得
+        // ?id=ID&name=名前&lang=言語
+        const urlParam = location.search.substring(1)
+        if (urlParam) {
+            let paramArray = [],
+                param = urlParam.split('&');
+            for (arr = 0; arr < param.length; arr++) {
+                var paramItem = param[arr].split('=')
+                paramArray[paramItem[0]] = paramItem[1]
+            }
+            let thisID = paramArray.id;
+            let thisName = paramArray.name;
+            let thisLang = paramArray.lang;
+            window.addEventListener("load", (event) => {
+                const value = document.querySelector('#value')
+                value.className = thisLang + '_app';
+            });
+            fetchMD(thisID + '/' + thisName + '_' + thisLang + '.txt', '#value')
+        } else {
+            fetchMD('../profile/README.md', '#value')
+        }
+    </script>
 </head>
 
 <body>
