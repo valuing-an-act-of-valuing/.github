@@ -22,17 +22,19 @@ document.addEventListener('readystatechange', event => {
             const yourEmail = localStorage.getItem("yourEmail")
             email.value = yourEmail;
             email.readOnly = true;
-        } else if (localStorage.getItem("yourValue") && localStorage.getItem("yourLan") && localStorage.getItem("valuText")) {
-            yourValue.value = localStorage.getItem("yourValue")
-            yourText.value = localStorage.getItem("valuText")
-            const yourLang = localStorage.getItem("yourLan")
-            document.querySelector(`#${yourLang}`).checked;
         } else {
             let hiddenAll = document.querySelectorAll("#index, #appreciate, #title, #what")
             for (let hiddenThis of hiddenAll) {
                 hiddenThis.remove()
             }
             fetchMD('profile/README.md', '#readme')
+        }
+
+        if (localStorage.getItem("yourValue") && localStorage.getItem("yourLan") && localStorage.getItem("valuText")) {
+            yourValue.value = localStorage.getItem("yourValue")
+            yourText.value = localStorage.getItem("valuText")
+            const yourLang = localStorage.getItem("yourLan")
+            document.querySelector(`#${yourLang}`).checked;
         }
     } else if (event.target.readyState === 'complete') {
         // フォームの名前からそのフォームへの参照を取得する
