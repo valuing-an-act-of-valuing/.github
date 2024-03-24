@@ -35,6 +35,11 @@
         // URLのパラメータを取得
         // ?id=ID&name=名前&lang=言語
         const urlParam = location.search.substring(1)
+
+        let thisID,
+            thisName,
+            thisLang;
+
         if (urlParam) {
             let paramArray = [],
                 param = urlParam.split('&');
@@ -42,24 +47,28 @@
                 var paramItem = param[arr].split('=')
                 paramArray[paramItem[0]] = paramItem[1]
             }
-            let thisID = paramArray.id;
-            let thisName = paramArray.name;
-            let thisLang = paramArray.lang;
-            window.addEventListener("load", (event) => {
-                const value = document.querySelector('#value')
-                value.className = thisLang + '_app';
-            });
-            fetchMD(thisID + '/' + thisName + '_' + thisLang + '.txt', '#value')
+            thisID = paramArray.id;
+            thisName = paramArray.name;
+            thisLang = paramArray.lang;
         } else {
-            fetchMD('../profile/README.md', '#value')
+            thisID = 'thing';
+            thisName = 'motto';
+            thisLang = 'ja';
         }
+
+        window.addEventListener("load", (event) => {
+            const value = document.querySelector('#value')
+            value.className = thisLang + '_app';
+        });
+
+        fetchMD(thisID + '/' + thisName + '_' + thisLang + '.txt', '#value')
     </script>
 </head>
 
 <body>
     <h1>
-        <strong>あなたの大切なものは何ですか？</strong><br>
-        <small>あなたの名前</small>
+        <strong>Sign</strong><br>
+        <small>creative, community space ∧° ┐</small>
     </h1>
     <article id="value"></article>
     <footer>

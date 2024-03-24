@@ -112,16 +112,12 @@ h1 {
     z-index: 100;
 }
 
-article#value {
-    padding: 5%;
-}
-
 .ja_app {
     font-size: 90%;
     padding: 1rem 1rem 5%;
     margin: 1rem auto;
     width: 90%;
-    height: 75vh;
+    height: 90vh;
     max-width: 1000px;
     max-height: 550px;
     overflow: auto;
@@ -133,6 +129,10 @@ article#value {
     margin: 2.5rem auto 5rem;
     width: 90%;
     max-width: 750px;
+}
+
+article#value {
+    padding: 5%;
 }
 
 footer {
@@ -148,17 +148,21 @@ footer {
     }
 
     article#value {
-        padding: 12.5% 10% 5% 10%;
+        padding: 5% 10%;
     }
 }
 
 @media screen and (max-width: 550px) {
+    .ja_app {
+        margin: 5% auto;
+    }
+
     .en_app {
         margin: 10% auto;
     }
 
     article#value {
-        padding: 12.5% 15% 5% 5%;
+        padding: 10% 15% 10% 5%;
     }
 }
 

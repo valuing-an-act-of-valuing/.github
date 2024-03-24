@@ -14,7 +14,7 @@ document.addEventListener('readystatechange', event => {
             for (let hiddenThis of hiddenAll) {
                 hiddenThis.remove()
             }
-            iconI.textContent = 'submit form';
+            iconI.textContent = 'web form';
             submitBtn.textContent = 'Submit 投稿';
             const yourName = localStorage.getItem("yourName")
             name.value = yourName;
