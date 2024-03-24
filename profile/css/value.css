@@ -93,7 +93,7 @@ h3.vertical {
     height: max-content;
 }
 
-#value article {
+#value {
     display: grid;
     width: 100%;
     place-items: center;
