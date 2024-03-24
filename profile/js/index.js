@@ -29,7 +29,20 @@ function indexValue(obj) {
         <small>${value.by}</small>
         `;
         appreciate.appendChild(button)
+
+        const yourName = document.querySelector('#value small')
+        const yourValue = document.querySelector('#value strong')
+        const yourText = document.querySelector('#value section')
         button.addEventListener('click', function () {
+            yourName.textContent = value.by;
+            yourValue.textContent = value.title;
+            yourText.className = `${value.lang}_app`;
+            fetch(`online/${value.id}/${value.name}_${value.lang}.txt`)
+                .then(response => response.text())
+                .then(text => {
+                    yourText.innerText = text
+                })
+
             changeHidden()
         })
     }

@@ -93,8 +93,16 @@ h3.vertical {
     height: max-content;
 }
 
+#value button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 333%;
+}
+
 #value {
     display: grid;
+    padding-right: 2.5rem;
     place-items: center;
     position: relative;
 }
