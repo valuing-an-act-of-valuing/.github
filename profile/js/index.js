@@ -29,8 +29,22 @@ function indexValue(obj) {
         <small>${value.name}</small>
         `;
         appreciate.appendChild(button)
+        button.addEventListener('click', function () {
+            changeHidden()
+        })
     }
 }
+
+function changeHidden() {
+    let allElement = document.querySelectorAll("main")
+    for (let chengeAll of allElement) {
+        if (chengeAll.hidden === true) {
+            chengeAll.hidden = false;
+        } else {
+            chengeAll.hidden = true;
+        }
+    }
+};
 
 document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'interactive') {

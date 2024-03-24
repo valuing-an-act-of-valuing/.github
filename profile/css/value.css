@@ -95,7 +95,6 @@ h3.vertical {
 
 #value {
     display: grid;
-    width: 100%;
     place-items: center;
     position: relative;
 }
@@ -145,6 +144,10 @@ footer {
 @media screen and (max-width: 900px) {
     h1 {
         margin: 4.5% 3%;
+    }
+
+    #value {
+        padding-right: 12.5%;
     }
 }
 
