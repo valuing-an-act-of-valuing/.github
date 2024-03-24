@@ -38,17 +38,17 @@ document.addEventListener('readystatechange', event => {
         // フォームの名前からそのフォームへの参照を取得する
         const form = document.forms["enter"]
 
-        // 'submit' イベントのハンドラーを追加
-        form.addEventListener("submit", (event) => {
-            event.preventDefault()
 
-            // key/value ペアをリストします
-            let formData = new FormData(form)
-            for (let [name, value] of formData) {
-                localStorage.setItem(name, value)
-            }
+        if (localStorage.getItem("yourName") && localStorage.getItem("yourEmail")) {
+            // 'submit' イベントのハンドラーを追加
+            form.addEventListener("submit", (event) => {
+                event.preventDefault()
 
-            if (localStorage.getItem("yourName") && localStorage.getItem("yourEmail")) {
+                // key/value ペアをリストします
+                let formData = new FormData(form)
+                for (let [name, value] of formData) {
+                    localStorage.setItem(name, value)
+                }
                 form.innerHTML = `
                 <h2 id="icon">
                 <small>投稿完了</small><br>
@@ -88,10 +88,21 @@ document.addEventListener('readystatechange', event => {
                 setTimeout(() => {
                     location.assign('profile/')
                 }, 1500)
-            } else {
+            })
+        } else {
+            // 'submit' イベントのハンドラーを追加
+            form.addEventListener("submit", (event) => {
+                event.preventDefault()
+
+                // key/value ペアをリストします
+                let formData = new FormData(form)
+                for (let [name, value] of formData) {
+                    localStorage.setItem(name, value)
+                }
+
                 location.reload()
-            }
-        })
+            })
+        }
     }
 });
 
