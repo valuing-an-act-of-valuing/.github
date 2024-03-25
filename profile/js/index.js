@@ -37,7 +37,7 @@ function indexValue(obj) {
             yourName.textContent = value.by;
             yourValue.textContent = value.title;
             yourText.className = `${value.lang}_app`;
-            fetch(`online/${value.id}/${value.name}_${value.lang}.txt`)
+            fetch(`${obj.value}/${value.id}/${value.name}_${value.lang}.txt`)
                 .then(response => response.text())
                 .then(text => {
                     yourText.innerText = text

@@ -1,7 +1,7 @@
 form {
     padding: 2.5% 2.5% 5%;
     margin: auto;
-    width: 90%;
+    width: 100%;
     max-width: 750px;
 }
 
@@ -14,8 +14,12 @@ legend {
 input[type="text"],
 input[type="email"],
 textarea {
-    font-size: 111%;
+    appearance: none;
+    font-size: 17px;
     font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    outline: none;
+    border: solid 0.1rem #000;
+    border-radius: 0.25rem;
     padding: 0.25rem;
     margin: 0;
     width: 100%;
@@ -54,7 +58,7 @@ form button[type="submit"] {
     input[type="text"],
     input[type="email"],
     textarea {
-        font-size: 15px;
-        padding: 0.5vw;
+        font-size: 14px;
+        padding: 0.25rem;
     }
 }

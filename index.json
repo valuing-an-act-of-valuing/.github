@@ -1,11 +1,15 @@
 {
+  "value": "online",
   "appreciate": [
     {
-      "id": "valuing",
-      "name": "nostalgia",
-      "title": "懐かしさ",
-      "by": "千瑛",
-      "lang": "ja"
+      "id": "object",
+      "name": "galaxy",
+      "title": "Galaxy",
+      "by": "ささじまかずま",
+      "lang": "ja",
+      "image": [
+        "galaxy.png"
+      ]
     },
     {
       "id": "people",
@@ -18,17 +22,14 @@
       ]
     },
     {
-      "id": "object",
-      "name": "galaxy",
-      "title": "Galaxy",
-      "by": "ささじまかずま",
-      "lang": "ja",
-      "image": [
-        "galaxy.png"
-      ]
+      "id": "thing",
+      "name": "nostalgia",
+      "title": "懐かしさ",
+      "by": "千瑛",
+      "lang": "ja"
     },
     {
-      "id": "thing",
+      "id": "valuing",
       "name": "motto",
       "title": ".pe.hu",
       "by": "creative, community space ∧° ┐",
