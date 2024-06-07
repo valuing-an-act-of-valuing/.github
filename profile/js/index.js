@@ -46,6 +46,7 @@ function indexValue(obj) {
             if (value.image) {
                 img.src = `${obj.value}/${value.id}/img/${value.image}`;
                 img.alt = value.title;
+                img.style.margin = "2rem 0";
                 img.animate(
                     {
                         opacity: [0, 1],
@@ -124,6 +125,7 @@ function changeHidden() {
     if (document.body.className === "open") {
         document.body.className = "close";
         const img = document.querySelector('#value img')
+        img.style.margin = "0";
         img.hidden = true;
         thisValue()
     } else {
