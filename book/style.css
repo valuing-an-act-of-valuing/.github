@@ -23,8 +23,8 @@
 
 @media screen and (max-width: 750px) {
   #cover {
-      margin: auto;
-      max-width: 75%;
+    margin: auto;
+    max-width: 75%;
   }
 }
 
@@ -87,9 +87,9 @@
 #footer {
   position: fixed;
   z-index: 100;
-  bottom:-100vh;
-  left:0;
+  bottom: -100vh;
+  left: 0;
   text-shadow:
-  1px 1px 0 #fff,
-  2px 2px 0 #fff;
+    1px 1px 0 #fff,
+    2px 2px 0 #fff;
 }

@@ -1,5 +1,5 @@
 {
-  "value": "online",
+  "value": "profile",
   "appreciate": [
     {
       "id": "object",
@@ -7,9 +7,7 @@
       "title": "Galaxy",
       "by": "ささじまかずま",
       "lang": "ja",
-      "image": [
-        "galaxy.png"
-      ]
+      "image": "galaxy.png"
     },
     {
       "id": "people",
@@ -17,9 +15,7 @@
       "title": "憧れ",
       "by": "芥川亜由弥",
       "lang": "ja",
-      "image": [
-        "admiring.jpg"
-      ]
+      "image": "admiring.jpg"
     },
     {
       "id": "thing",
@@ -34,9 +30,7 @@
       "title": ".pe.hu",
       "by": "creative, community space ∧° ┐",
       "lang": "ja",
-      "image": [
-        "motto.jpeg"
-      ]
+      "image": "motto.jpeg"
     }
   ]
 }

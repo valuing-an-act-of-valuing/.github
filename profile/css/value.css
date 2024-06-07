@@ -121,6 +121,11 @@ article {
     min-height: calc(100vh - 5rem);
 }
 
+article img {
+    margin: 2rem 0;
+    max-width: 750px;
+}
+
 #links {
     font-size: 90%;
     padding: 0.75rem;

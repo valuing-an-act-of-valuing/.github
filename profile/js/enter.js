@@ -10,10 +10,6 @@ document.addEventListener('readystatechange', event => {
         const submitBtn = document.querySelector('form button[type="submit"]')
 
         if (localStorage.getItem("yourName") && localStorage.getItem("yourEmail")) {
-            let removeAll = document.querySelectorAll("#readme")
-            for (let removeThis of removeAll) {
-                removeThis.remove()
-            }
             iconI.textContent = 'web form';
             submitBtn.textContent = 'Submit 投稿';
             const yourName = localStorage.getItem("yourName")
@@ -27,7 +23,6 @@ document.addEventListener('readystatechange', event => {
             for (let removeThis of removeAll) {
                 removeThis.remove()
             }
-            fetchMD('profile/README.md', '#readme')
         }
 
         if (localStorage.getItem("yourValue") && localStorage.getItem("yourLan") && localStorage.getItem("valuText")) {
@@ -36,20 +31,19 @@ document.addEventListener('readystatechange', event => {
             document.querySelector(`#${localStorage.getItem("yourLan")}`).checked = true;
         }
     } else if (event.target.readyState === 'complete') {
-        // フォームの名前からそのフォームへの参照を取得する
+        // フォーム名からフォームへの参照を取得する
         const form = document.forms["enter"]
-
-
         if (localStorage.getItem("yourName") && localStorage.getItem("yourEmail")) {
             // 'submit' イベントのハンドラーを追加
-            form.addEventListener("submit", (event) => {
-                event.preventDefault()
+            form.addEventListener("submit", (e) => {
+                e.preventDefault()
 
                 // key/value ペアをリストします
                 let formData = new FormData(form)
                 for (let [name, value] of formData) {
                     localStorage.setItem(name, value)
                 }
+
                 form.innerHTML = `
                 <h2 id="icon">
                 <small>投稿完了</small><br>
@@ -85,27 +79,24 @@ document.addEventListener('readystatechange', event => {
                         });
                 }
                 submitThis()
-
                 setTimeout(() => {
                     location.replace('profile/')
                 }, 1500)
             })
         } else {
             // 'submit' イベントのハンドラーを追加
-            form.addEventListener("submit", (event) => {
-                event.preventDefault()
-
-                // key/value ペアをリストします
+            form.addEventListener("submit", (e) => {
+                e.preventDefault()
+                // key/value ペアをリスト
                 let formData = new FormData(form)
                 for (let [name, value] of formData) {
                     localStorage.setItem(name, value)
                 }
-
                 location.reload()
             })
         }
     }
-});
+}, false)
 
 async function fetchMD(url = '', query = '') {
     fetch(url)

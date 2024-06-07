@@ -33,31 +33,35 @@ function indexValue(obj) {
         const yourName = document.querySelector('#value small')
         const yourValue = document.querySelector('#value strong')
         const yourText = document.querySelector('#value section')
+        const img = document.querySelector('#value img')
         button.addEventListener('click', function () {
             yourName.textContent = value.by;
             yourValue.textContent = value.title;
             yourText.className = `${value.lang}_app`;
-            fetch(`${obj.value}/${value.id}/${value.name}_${value.lang}.txt`)
+            fetch(`${obj.value}/${value.id}/${value.name}.txt`)
                 .then(response => response.text())
                 .then(text => {
                     yourText.innerText = text
                 })
-
+            if (value.image) {
+                img.src = `${obj.value}/${value.id}/img/${value.image}`;
+                img.alt = value.title;
+                img.animate(
+                    {
+                        opacity: [0, 1],
+                        filter: ["blur(1rem)", "blur(0)"]
+                    },
+                    {
+                        fill: "forwards",
+                        duration: 2500
+                    }
+                )
+                img.hidden = false;
+            }
             changeHidden()
         })
     }
 }
-
-function changeHidden() {
-    let allElement = document.querySelectorAll("h1, header, main, footer")
-    for (let chengeAll of allElement) {
-        if (chengeAll.hidden === true) {
-            chengeAll.hidden = false;
-        } else {
-            chengeAll.hidden = true;
-        }
-    }
-};
 
 document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'interactive') {
@@ -66,6 +70,7 @@ document.addEventListener('readystatechange', event => {
         closeModal.addEventListener('click', () => {
             dialogModal.close()
         })
+        thisValue()
     } else if (event.target.readyState === 'complete') {
         let filter = document.querySelectorAll('#index input[type="radio"]')
         for (let i of filter) {
@@ -82,7 +87,59 @@ document.addEventListener('readystatechange', event => {
             })
         }
     }
-})
+}, false)
+
+function thisValue() {
+    const yourName = document.querySelector('#value small')
+    const yourValue = document.querySelector('#value strong')
+    const yourText = document.querySelector('#value section')
+
+    if (localStorage.getItem("yourValue") && localStorage.getItem("yourLan") && localStorage.getItem("valuText")) {
+        yourName.textContent = localStorage.getItem("yourName")
+        yourValue.textContent = localStorage.getItem("yourValue")
+        yourText.innerHTML = localStorage.getItem("valuText").replace(/\n/g, '<br>')
+        yourText.className = `${localStorage.getItem("yourLan")}_app`;
+    } else {
+        yourName.textContent = "creative, community space ∧° ┐"
+        yourValue.textContent = "大切にすることを大切にするための場所"
+        yourText.className = 'ja_app';
+        fetch('profile/README.md')
+            .then(response => response.text())
+            .then(text => {
+                yourText.innerText = text
+            })
+    }
+}
+
+function changeHidden() {
+    const allElement = document.querySelectorAll("h1, header, main, footer")
+    for (let chengeAll of allElement) {
+        if (chengeAll.hidden === true) {
+            chengeAll.hidden = false;
+        } else {
+            chengeAll.hidden = true;
+        }
+    }
+
+    if (document.body.className === "open") {
+        document.body.className = "close";
+        const img = document.querySelector('#value img')
+        img.hidden = true;
+        thisValue()
+    } else {
+        document.body.className = "open"
+        document.querySelector('#value section').animate(
+            {
+                opacity: [0, 1],
+                filter: ["blur(1rem)", "blur(0)"]
+            },
+            {
+                fill: "forwards",
+                duration: 2500
+            }
+        )
+    }
+}
 
 function openModal() {
     const dialogModal = document.querySelector('dialog')

@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <script src="profile/js/index.js"></script>
-  <script src="profile/js/localStorage.js"></script>
+  <script src="profile/js/index.js?v=1.0"></script>
+  <script src="profile/js/enter.js?v=1.0"></script>
   <script>
     if (localStorage.getItem("yourName") && localStorage.getItem("yourEmail")) {
       indexJson('index.json')
@@ -14,7 +14,6 @@
       //
     }
   </script>
-  <script src="profile/js/enter.js"></script>
 
   <!--og:meta-->
   <meta content="website" property="og:type">
@@ -39,18 +38,20 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,600;0,700;1,600&display=swap">
 
-  <link rel="stylesheet" href="profile/css/style.css">
-  <link rel="stylesheet" href="profile/css/icon.css">
-  <link rel="stylesheet" href="profile/css/value.css">
-  <link rel="stylesheet" href="profile/css/form.css">
+  <link rel="stylesheet" href="profile/css/style.css?v=1.0">
+  <link rel="stylesheet" href="profile/css/icon.css?v=1.0">
+  <link rel="stylesheet" href="profile/css/value.css?v=1.0">
+  <link rel="stylesheet" href="profile/css/form.css?v=1.0">
 </head>
 
-<body>
-  <h1 onclick="openModal()">大切にすることを大切にするための場所</h1>
+<body class="close">
+  <h1 onclick="changeHidden()">
+    大切にすることを大切にするための場所
+  </h1>
   <header>
     <h2>
       Index /
-      <button type="button" onclick="openModal()">valuing an act of valuing</button>
+      <button type="button" onclick="changeHidden()">valuing an act of valuing</button>
     </h2>
     <nav id="index">
       <input id="thing" value="thing" type="radio" name="index">
@@ -69,9 +70,10 @@
   <main hidden>
     <article id="value">
       <h3 class="ja vertical">
-        <strong>あなたの大切なものは何ですか？</strong>
+        <strong>大切にすることを大切にするための場所</strong>
         <small>creative, community space ∧° ┐</small>
       </h3>
+      <img src="" alt="" width="90%" hidden>
       <section></section>
       <button type="button" onclick="changeHidden()">✕</button>
     </article>
@@ -79,7 +81,7 @@
 
   <main>
     <div id="appreciate"></div>
-    <div>
+    <div id="gallery">
       <a onclick="openModal()">
         <strong>あなたの大切なものは何ですか？</strong><br>
         <small>What do you value?</small>
@@ -128,7 +130,6 @@
       </fieldset>
       <button type="submit">Enter</button>
     </form>
-    <div id="readme" class="ja_app"></div>
     <button type="button" id="close">×</button>
   </dialog>
 
