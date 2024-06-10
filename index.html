@@ -5,15 +5,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <script src="profile/js/index.js?v=1.1"></script>
-  <script src="profile/js/enter.js?v=1.0"></script>
-  <script>
-    if (localStorage.getItem("yourName") && localStorage.getItem("yourEmail")) {
-      indexJson('index.json')
-    } else {
-      //
-    }
-  </script>
 
   <!--og:meta-->
   <meta content="website" property="og:type">
@@ -42,6 +33,16 @@
   <link rel="stylesheet" href="profile/css/icon.css?v=1.0">
   <link rel="stylesheet" href="profile/css/value.css?v=1.1">
   <link rel="stylesheet" href="profile/css/form.css?v=1.0">
+
+  <script src="profile/js/index.js?v=1.1"></script>
+  <script src="profile/js/enter.js?v=1.0"></script>
+  <script>
+    if (localStorage.getItem("yourName") && localStorage.getItem("yourEmail")) {
+      indexJson('index.json')
+    } else {
+      //
+    }
+  </script>
 </head>
 
 <body class="close">
